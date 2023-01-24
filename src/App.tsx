@@ -1,11 +1,13 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import Home from "./views/Home";
 
 function App() {
   return (
-    <div className="text-red-400 text-4xl flex justify-center items-center h-[100vh] text-center">
-      {process.env.REACT_APP_MESSAGE}
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 }
 
