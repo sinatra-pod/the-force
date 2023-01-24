@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   return (
     <div className="text-red-400 text-4xl flex justify-center items-center h-[100vh] text-center">
-      Lets Build The Force Platform
+      {process.env.REACT_APP_MESSAGE}
     </div>
   );
 }
