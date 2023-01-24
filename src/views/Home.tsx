@@ -3,6 +3,8 @@ import useHeader from '../hooks/useHeader'
 
 function Home() {
   
+  // extract the header from the hook
+  // Header extracted will be used to determine the current page    
   const {header} = useHeader("Home")
   
   return (
