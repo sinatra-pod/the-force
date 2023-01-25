@@ -1,5 +1,4 @@
 import React from "react";
-import useHeader from "../hooks/useHeader";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillFacebook } from "react-icons/ai";
 
