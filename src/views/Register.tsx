@@ -22,21 +22,21 @@ function Register() {
             <label>Email</label>
             <input type="text" className="border relative bg-gray-100 p-2" />
           </div >
-          <div className="flex flex-col">
+          <div className="flex flex-col  mb-4">
             <label>Password</label>
             <input type="password" className="border relative bg-gray-100 p-2" />
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col ">
             <label>confirm password</label>
             <input type="password" className="border relative bg-gray-100 p-2" />
           </div>
-          <button className="w-full py-4 mt-8 bg-zinc-900/90 text-white">Sign In</button>
+          <button className="w-full py-4 mt-8 bg-zinc-900/90 text-white">Sign Up</button>
           <div>
-            <p className="flex items-center mt-2">
+            {/* <p className="flex items-center mt-2">
               <input type="checkbox"  className="mr-2"/>
               Remember Me
-            </p>
+            </p> */}
             <p className="text-center mt-8">Login to your account</p>
           </div>
         </form>
