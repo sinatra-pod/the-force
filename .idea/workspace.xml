@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a9d2bb7-8d45-4d8a-af1a-ea4141884bc8" name="Changes" comment="App: Updated firebase project name">
-      <change beforePath="$PROJECT_DIR$/.firebaserc" beforeDir="false" afterPath="$PROJECT_DIR$/.firebaserc" afterDir="false" />
+    <list default="true" id="9a9d2bb7-8d45-4d8a-af1a-ea4141884bc8" name="Changes" comment="App: Updated firebase project Id in CI">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/firebase-hosting-merge.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/firebase-hosting-merge.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/firebase-hosting-pull-request.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/firebase-hosting-pull-request.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +54,7 @@
       <updated>1674547958504</updated>
       <workItem from="1674547960713" duration="6580000" />
       <workItem from="1674564788625" duration="3654000" />
-      <workItem from="1674626251591" duration="2531000" />
+      <workItem from="1674626251591" duration="2837000" />
     </task>
     <task id="LOCAL-00001" summary="CI: Setup Firebase PR &amp; Deploy">
       <created>1674627291680</created>
@@ -82,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674630573955</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="App: Updated firebase project Id in CI">
+      <created>1674630880325</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674630880325</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +101,7 @@
     <MESSAGE value="CI: Setup Firebase PR &amp; Deploy" />
     <MESSAGE value="CI: Updated GH token" />
     <MESSAGE value="App: Updated firebase project name" />
-    <option name="LAST_COMMIT_MESSAGE" value="App: Updated firebase project name" />
+    <MESSAGE value="App: Updated firebase project Id in CI" />
+    <option name="LAST_COMMIT_MESSAGE" value="App: Updated firebase project Id in CI" />
   </component>
 </project>
