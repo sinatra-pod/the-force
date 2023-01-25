@@ -17,7 +17,7 @@ function Register() {
           </div>
           <div className="flex flex-col mb-4">
             <label>Email</label>
-            <input type="text" className="border relative bg-gray-100 p-2" />
+            <input type="email" className="border relative bg-gray-100 p-2" />
           </div >
           <div className="flex flex-col  mb-4">
             <label>Password</label>
@@ -25,7 +25,7 @@ function Register() {
           </div>
 
           <div className="flex flex-col ">
-            <label>confirm password</label>
+            <label>Confirm Password</label>
             <input type="password" className="border relative bg-gray-100 p-2" />
           </div>
           <button className="w-full py-4 mt-8 bg-zinc-900/90 text-white">Sign Up</button>
