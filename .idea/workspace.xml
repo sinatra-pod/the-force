@@ -52,7 +52,7 @@
       <updated>1674547958504</updated>
       <workItem from="1674547960713" duration="6580000" />
       <workItem from="1674564788625" duration="3654000" />
-      <workItem from="1674626251591" duration="9282000" />
+      <workItem from="1674626251591" duration="10067000" />
     </task>
     <task id="LOCAL-00001" summary="CI: Setup Firebase PR &amp; Deploy">
       <created>1674627291680</created>
@@ -152,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674644141010</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="CI: Updated workflow permissions v3">
+      <created>1674645052903</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1674645052903</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

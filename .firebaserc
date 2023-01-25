@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "the-force-sinatra",
+    "default": "the-force-8688d",
     "production": "the-force-8688d"
   },
   "targets": {},
