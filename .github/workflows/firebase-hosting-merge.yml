@@ -6,10 +6,12 @@ name: Deploy to Firebase Hosting on merge
   push:
     branches:
       - master
+
+permissions: read_all|write_all
+
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
-    permissions: read_all|write_all
     steps:
       - uses: actions/checkout@v2
       - run: npm ci && npm run build
