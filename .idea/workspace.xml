@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a9d2bb7-8d45-4d8a-af1a-ea4141884bc8" name="Changes" comment="CI: Updated workflow permissions v1">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/firebase-hosting-merge.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/firebase-hosting-merge.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/firebase-hosting-pull-request.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/firebase-hosting-pull-request.yml" afterDir="false" />
+    <list default="true" id="9a9d2bb7-8d45-4d8a-af1a-ea4141884bc8" name="Changes" comment="CI: Updated workflow permissions v3">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +52,7 @@
       <updated>1674547958504</updated>
       <workItem from="1674547960713" duration="6580000" />
       <workItem from="1674564788625" duration="3654000" />
-      <workItem from="1674626251591" duration="8470000" />
+      <workItem from="1674626251591" duration="9282000" />
     </task>
     <task id="LOCAL-00001" summary="CI: Setup Firebase PR &amp; Deploy">
       <created>1674627291680</created>
@@ -139,7 +138,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674643884870</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="CI: Updated workflow permissions v2">
+      <created>1674643937342</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674643937342</updated>
+    </task>
+    <task id="LOCAL-00014" summary="CI: Updated workflow permissions v3">
+      <created>1674644141010</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1674644141010</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +168,8 @@
     <MESSAGE value="CI: Updated project ID in firebase" />
     <MESSAGE value="CI: Updated workflow permissions" />
     <MESSAGE value="CI: Updated workflow permissions v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="CI: Updated workflow permissions v1" />
+    <MESSAGE value="CI: Updated workflow permissions v2" />
+    <MESSAGE value="CI: Updated workflow permissions v3" />
+    <option name="LAST_COMMIT_MESSAGE" value="CI: Updated workflow permissions v3" />
   </component>
 </project>
