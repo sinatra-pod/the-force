@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a9d2bb7-8d45-4d8a-af1a-ea4141884bc8" name="Changes" comment="App: Updated login page" />
+    <list default="true" id="9a9d2bb7-8d45-4d8a-af1a-ea4141884bc8" name="Changes" comment="CI: Updated project ID in firebase">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +52,7 @@
       <updated>1674547958504</updated>
       <workItem from="1674547960713" duration="6580000" />
       <workItem from="1674564788625" duration="3654000" />
-      <workItem from="1674626251591" duration="7440000" />
+      <workItem from="1674626251591" duration="8167000" />
     </task>
     <task id="LOCAL-00001" summary="CI: Setup Firebase PR &amp; Deploy">
       <created>1674627291680</created>
@@ -108,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674641756327</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="CI: Updated project ID in firebase">
+      <created>1674642341417</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674642341417</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +130,7 @@
     <MESSAGE value="App: Updated firebase project Id in CI" />
     <MESSAGE value="CI: Update CI with manual deploy trigger" />
     <MESSAGE value="App: Updated login page" />
-    <option name="LAST_COMMIT_MESSAGE" value="App: Updated login page" />
+    <MESSAGE value="CI: Updated project ID in firebase" />
+    <option name="LAST_COMMIT_MESSAGE" value="CI: Updated project ID in firebase" />
   </component>
 </project>
