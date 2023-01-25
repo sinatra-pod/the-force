@@ -1,10 +1,7 @@
 import React from "react";
-import useHeader from "../hooks/useHeader";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillFacebook } from "react-icons/ai";
 function Register() {
-  // extract the header from the hook
-  // Header extracted will be used to determine the current page
   return (
     <div className="relative w-full h-screen bg-zinc-900/90">
       <div className="flex justify-center items-center h-full">
@@ -33,11 +30,7 @@ function Register() {
           </div>
           <button className="w-full py-4 mt-8 bg-zinc-900/90 text-white">Sign Up</button>
           <div>
-            {/* <p className="flex items-center mt-2">
-              <input type="checkbox"  className="mr-2"/>
-              Remember Me
-            </p> */}
-            <p className="text-center mt-8">Login to your account</p>
+            <p className="text-center mt-8">Login to your existing account</p>
           </div>
         </form>
       </div>
