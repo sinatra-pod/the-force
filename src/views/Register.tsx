@@ -9,12 +9,8 @@ function Register() {
         <form className="max-w-[400px] w-full mx-auto bg-white p-8">
           <h2 className="text-4xl font-bold text-center py-4">THE FORCE</h2>
           <div className="flex justify-between py-8">
-            <p className="border shadow-lg hover:shadow-xl px-6 py-2 flex items-center">
-              <a href="#"><FcGoogle className="mr-2" /> Google</a>
-            </p>
-            <p className="border shadow-lg hover:shadow-xl px-6 py-2 flex items-center">
-              <a href="#"><AiFillFacebook className="mr-2" /> Facebook</a>
-            </p>
+              <a className="border shadow-lg hover:shadow-xl px-6 py-2 flex items-center"  href="#"><FcGoogle className="mr-2" /> Google</a>
+              <a className="border shadow-lg hover:shadow-xl px-6 py-2 flex items-center" href="#"><AiFillFacebook className="mr-2" /> Facebook</a>
           </div>
           <div className="flex flex-col mb-4">
             <label>Email</label>
