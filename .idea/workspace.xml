@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a9d2bb7-8d45-4d8a-af1a-ea4141884bc8" name="Changes" comment="" />
+    <list default="true" id="9a9d2bb7-8d45-4d8a-af1a-ea4141884bc8" name="Changes" comment="CI: Updated workflow permissions v3">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ianokumu/TF-11/environment-setup" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
@@ -27,6 +29,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
@@ -48,11 +51,132 @@
       <option name="presentableId" value="Default" />
       <updated>1674547958504</updated>
       <workItem from="1674547960713" duration="6580000" />
-      <workItem from="1674564788625" duration="616000" />
+      <workItem from="1674564788625" duration="3654000" />
+      <workItem from="1674626251591" duration="10067000" />
     </task>
+    <task id="LOCAL-00001" summary="CI: Setup Firebase PR &amp; Deploy">
+      <created>1674627291680</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674627291680</updated>
+    </task>
+    <task id="LOCAL-00002" summary="CI: Updated GH token">
+      <created>1674628889034</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674628889034</updated>
+    </task>
+    <task id="LOCAL-00003" summary="App: Updated firebase project name">
+      <created>1674630352094</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674630352094</updated>
+    </task>
+    <task id="LOCAL-00004" summary="App: Updated firebase project name">
+      <created>1674630573955</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674630573955</updated>
+    </task>
+    <task id="LOCAL-00005" summary="App: Updated firebase project Id in CI">
+      <created>1674630880325</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674630880325</updated>
+    </task>
+    <task id="LOCAL-00006" summary="App: Updated firebase project Id in CI">
+      <created>1674631349628</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674631349628</updated>
+    </task>
+    <task id="LOCAL-00007" summary="CI: Update CI with manual deploy trigger">
+      <created>1674638596960</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674638596960</updated>
+    </task>
+    <task id="LOCAL-00008" summary="App: Updated login page">
+      <created>1674641756327</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674641756327</updated>
+    </task>
+    <task id="LOCAL-00009" summary="CI: Updated project ID in firebase">
+      <created>1674642341417</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674642341417</updated>
+    </task>
+    <task id="LOCAL-00010" summary="CI: Updated workflow permissions">
+      <created>1674643725653</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1674643725653</updated>
+    </task>
+    <task id="LOCAL-00011" summary="CI: Updated workflow permissions">
+      <created>1674643815130</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674643815130</updated>
+    </task>
+    <task id="LOCAL-00012" summary="CI: Updated workflow permissions v1">
+      <created>1674643884870</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1674643884870</updated>
+    </task>
+    <task id="LOCAL-00013" summary="CI: Updated workflow permissions v2">
+      <created>1674643937342</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674643937342</updated>
+    </task>
+    <task id="LOCAL-00014" summary="CI: Updated workflow permissions v3">
+      <created>1674644141010</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1674644141010</updated>
+    </task>
+    <task id="LOCAL-00015" summary="CI: Updated workflow permissions v3">
+      <created>1674645052903</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1674645052903</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="CI: Setup Firebase PR &amp; Deploy" />
+    <MESSAGE value="CI: Updated GH token" />
+    <MESSAGE value="App: Updated firebase project name" />
+    <MESSAGE value="App: Updated firebase project Id in CI" />
+    <MESSAGE value="CI: Update CI with manual deploy trigger" />
+    <MESSAGE value="App: Updated login page" />
+    <MESSAGE value="CI: Updated project ID in firebase" />
+    <MESSAGE value="CI: Updated workflow permissions" />
+    <MESSAGE value="CI: Updated workflow permissions v1" />
+    <MESSAGE value="CI: Updated workflow permissions v2" />
+    <MESSAGE value="CI: Updated workflow permissions v3" />
+    <option name="LAST_COMMIT_MESSAGE" value="CI: Updated workflow permissions v3" />
   </component>
 </project>
