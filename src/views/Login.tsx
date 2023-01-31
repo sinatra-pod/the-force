@@ -17,7 +17,7 @@ function Login() {
       .then((result: any) =>{
         // const credential: any | null = GoogleAuthProvider.credentialFromResult(result);
         // const token = credential.accessToken;
-        const user = result.user
+        // const user = result.user
         navigate("/")
 
       }).catch((error: any)=>{
