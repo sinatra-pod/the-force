@@ -18,11 +18,9 @@ function Login() {
         // const credential: any | null = GoogleAuthProvider.credentialFromResult(result);
         // const token = credential.accessToken;
         const user = result.user
-        console.log(user)
         navigate("/")
 
       }).catch((error: any)=>{
-        console.log(error)
         // const email = error.customData./email;
         // const credential: any | null = GoogleAuthProvider.credentialFromError(error);
         
