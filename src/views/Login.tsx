@@ -15,14 +15,15 @@ function Login() {
   const onLogin = async () => {
     await signInWithPopup(auth, provider)
       .then((result: any) =>{
-        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const credential: any | null = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
         const user = result.user
+        console.log(user)
         navigate("/")
 
       }).catch((error: any)=>{
         const email = error.customData.email;
-        const credential = GoogleAuthProvider.credentialFromError(error);
+        const credential: any | null = GoogleAuthProvider.credentialFromError(error);
       })
   };
   return (
