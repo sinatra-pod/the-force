@@ -20,7 +20,6 @@ export const useLoginWithGithub = () => {
         const user = res.user
         console.log(user)
         setIsPending(false);
-      
     } catch (err:  any) {
         console.log(err)
         setError(err.message);
