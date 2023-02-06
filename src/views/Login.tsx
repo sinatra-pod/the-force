@@ -14,7 +14,7 @@ function Login() {
   const provider: any= new GoogleAuthProvider();
   provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
-  const {loginWithGithub, isPending, error} = useLoginWithGithub()
+  const {loginWithGithub, error:gitHubLoginError} = useLoginWithGithub()
 
   const onLogin = async () => {
     await signInWithPopup(auth, provider)
@@ -32,7 +32,7 @@ function Login() {
   };
   return (
     <div>
-      {error && <p>{error}</p>}
+      {gitHubLoginError && <p>{gitHubLoginError}</p>}
       <div className="relative w-full h-screen bg-zinc-900/90">
       <div className="flex justify-center items-center h-full">
         <form className="max-w-[400px] w-full mx-auto bg-white p-8">
