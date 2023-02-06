@@ -26,6 +26,7 @@ export const useLoginWithGithub = () => {
         setIsPending(false);
     }
   }, []);
+  
   return { loginWithGithub
     , error, isPending };
 };
