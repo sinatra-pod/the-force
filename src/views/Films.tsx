@@ -52,40 +52,7 @@ function Films() {
           </div>
 
 
-
-                <div className="col-start-2 col-end-6">
-                    <div className="w-full max-w-screen-md m-auto text-center bg-black">
-                        <div className="flex flex-wrap justify-between mt-16">
-                            <div className="w-1/3 mb-10 text-left">
-                                <img src="https://lumiere-a.akamaihd.net/v1/images/p_starwarstheriseofskywalker_18508_3840c966.jpeg" alt="starwar image" />
-                                <h2 className="text-2xl mb-2.5">A New Hope</h2>
-                                <p className="text-sm text-gray-500">Released: 1977</p>
-                            </div>
-                            <div className="w-1/3 mb-10 text-left">
-                                <img src="https://lumiere-a.akamaihd.net/v1/images/sb_teaser2_1-sht_v3a_online_lg_86f89198.jpeg" alt="starwar image" />
-                                <h2 className="text-2xl mb-2.5">The Empire Strikes Back</h2>
-                                <p className="text-sm text-gray-500">Released: 1980</p>We
-                            </div>
-                            <div className="w-1/3 mb-10 text-left">
-                                <img src="https://lumiere-a.akamaihd.net/v1/images/p_starwarstheriseofskywalker_18508_3840c966.jpeg" alt="starwar image" />
-                                <h2 className="text-2xl mb-2.5">Return of the Jedi</h2>
-                                <p className="text-sm text-gray-500">Released: 1983</p>
-                            </div>
-                            <div className="w-1/3 mb-10 text-left">
-                                <img src="https://lumiere-a.akamaihd.net/v1/images/p_starwarstheriseofskywalker_18508_3840c966.jpeg" alt="starwar image" />
-                                <h2 className="text-2xl mb-2.5">Return of the Jedi</h2>
-                                <p className="text-sm text-gray-500">Released: 1983</p>
-                            </div>
-                            <div className="w-1/3 mb-10 text-left">
-                                <img src="https://lumiere-a.akamaihd.net/v1/images/p_starwarstheriseofskywalker_18508_3840c966.jpeg" alt="starwar image" />
-                                <h2 className="text-2xl mb-2.5">Return of the Jedi</h2>
-                                <p className="text-sm text-gray-500">Released: 1983</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-          </div>
+        </div>
 
 
 
