@@ -53,7 +53,7 @@ function Films() {
 
 
 
-                {/* <div className="col-start-2 col-end-6">
+                <div className="col-start-2 col-end-6">
                     <div className="w-full max-w-screen-md m-auto text-center bg-black">
                         <div className="flex flex-wrap justify-between mt-16">
                             <div className="w-1/3 mb-10 text-left">
@@ -85,11 +85,10 @@ function Films() {
                     </div>
                     
                 </div>
-          </div> */}
+          </div>
 
 
 
-    </div>
   )
 }
 
