@@ -35,7 +35,7 @@ function Login() {
       {gitHubLoginError && <p>{gitHubLoginError}</p>}
       <div className="relative w-full h-screen bg-zinc-900/90">
       <div className="flex justify-center items-center h-full">
-        <form className="max-w-[400px] w-full mx-auto bg-white p-8">
+        <form className="max-w-[500px] w-full mx-auto bg-white p-8">
           <h2 className="text-4xl font-bold text-center py-4">THE FORCE</h2>
           <div className="flex justify-between py-8">
             <p className="border shadow-lg hover:shadow-xl px-6 py-2 flex items-center" onClick={onLogin}>
