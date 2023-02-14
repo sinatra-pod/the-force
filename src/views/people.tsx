@@ -2,13 +2,13 @@ import React from 'react'
 import logo from '../images/starwarslogo.png';
 import { FaInstagram, FaFacebook, FaTwitter, FaUser, FaSearch } from 'react-icons/fa';
 
-function Vehicles() {
+function People() {
     return (
         <div className="bg-black w-full min-h-screen mb-0">
             <nav className="grid justify-center p-6">
 
             <div className='flex-row flex items-stretch'>
-                <span  className='search'>
+                <span  className=''>
                     <form className="flex justify-end p-6 mt-8 rounded-full bg-black">
                     <button type="submit" className="btn-search ml-0 py-2 text-white rounded-full">
                             <FaSearch />
@@ -151,4 +151,4 @@ function Vehicles() {
     )
 }
 
-export default Vehicles;
+export default People;

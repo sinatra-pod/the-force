@@ -5,7 +5,6 @@ import Home from "./views/Home";
 import Register from "./views/Register";
 import Login from "./views/Login";
 import Vehicles from "./views/Vehicles";
-import Test from "./views/Test";
 
 function App() {
   return (
