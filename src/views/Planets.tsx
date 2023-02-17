@@ -29,16 +29,16 @@ function Planets() {
             </div>
                 <div className="w-full block lg:flex lg:w-auto">
                     <div className="lg:space-x-52 text-sm font-medium leading-8 tracking-0 text-white hover:text-teal-200 ">
-                        <a href="#tes" className="block mt-4 lg:inline-block lg:mt-0 ">
+                        <a href="tes" className="block mt-4 lg:inline-block lg:mt-0 ">
                             FILMS
                         </a>
-                        <a href="#tes" className="block mt-4 lg:inline-block lg:mt-0">
+                        <a href="tes" className="block mt-4 lg:inline-block lg:mt-0">
                             CHARACTERS
                         </a>
-                        <a href="#tes" className="block mt-4 lg:inline-block lg:mt-0">
+                        <a href="tes" className="block mt-4 lg:inline-block lg:mt-0">
                             SERIES
                         </a>
-                        <a href="#test" className="block mt-4 lg:inline-block lg:mt-0">
+                        <a href="test" className="block mt-4 lg:inline-block lg:mt-0">
                             DATABANK
                         </a>
                     </div>
