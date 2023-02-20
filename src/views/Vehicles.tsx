@@ -31,16 +31,16 @@ function Vehicles() {
 
                 <div className="w-full block lg:flex lg:w-auto">
                     <div className="lg:space-x-52 text-sm font-medium leading-8 tracking-0 text-white hover:text-teal-200 ">
-                        <a href="#" className="block mt-4 lg:inline-block lg:mt-0 ">
+                        <a href="/test" className="block mt-4 lg:inline-block lg:mt-0 ">
                             FILMS
                         </a>
-                        <a href="#" className="block mt-4 lg:inline-block lg:mt-0">
+                        <a href="/test" className="block mt-4 lg:inline-block lg:mt-0">
                             CHARACTERS
                         </a>
-                        <a href="#" className="block mt-4 lg:inline-block lg:mt-0">
+                        <a href="/test" className="block mt-4 lg:inline-block lg:mt-0">
                             SERIES
                         </a>
-                        <a href="#" className="block mt-4 lg:inline-block lg:mt-0">
+                        <a href="/test" className="block mt-4 lg:inline-block lg:mt-0">
                             DATABANK
                         </a>
                     </div>
@@ -63,73 +63,73 @@ function Vehicles() {
                         <div className="card">
                             <img src={logo} className="card-img-top" alt="Image" />
                             <div className="card-body">
-                                <p className='text-center text-white'><a href='#' className="card-title text-l font-medium">Card Title</a></p>
+                                <p className='text-center text-white'><a href='/test' className="card-title text-l font-medium">Card Title</a></p>
                             </div>
                         </div>
                         <div className="card">
                             <img src={logo} className="card-img-top" alt="Image" />
                             <div className="card-body">
-                                <p className='text-center text-white'><a href='#' className="card-title text-l font-medium">Card Title</a></p>
+                                <p className='text-center text-white'><a href='/test' className="card-title text-l font-medium">Card Title</a></p>
                             </div>
                         </div>
                         <div className="card">
                             <img src={logo} className="card-img-top" alt="Image" />
                             <div className="card-body">
-                                <p className='text-center text-white'><a href='#' className="card-title text-l font-medium">Card Title</a></p>
+                                <p className='text-center text-white'><a href='/test' className="card-title text-l font-medium">Card Title</a></p>
                             </div>
                         </div>
                         <div className="card">
                             <img src={logo} className="card-img-top" alt="Image" />
                             <div className="card-body">
-                                <p className='text-center text-white'><a href='#' className="card-title text-l font-medium">Card Title</a></p>
+                                <p className='text-center text-white'><a href='/test' className="card-title text-l font-medium">Card Title</a></p>
                             </div>
                         </div>
                         <div className="card">
                             <img src={logo} className="card-img-top" alt="Image" />
                             <div className="card-body">
-                                <p className='text-center text-white'><a href='#' className="card-title text-l font-medium">Card Title</a></p>
+                                <p className='text-center text-white'><a href='/test' className="card-title text-l font-medium">Card Title</a></p>
                             </div>
                         </div>
                         <div className="card">
                             <img src={logo} className="card-img-top" alt="Image" />
                             <div className="card-body">
-                                <p className='text-center text-white'><a href='#' className="card-title text-l font-medium">Card Title</a></p>
+                                <p className='text-center text-white'><a href='/test' className="card-title text-l font-medium">Card Title</a></p>
                             </div>
                         </div>
                         <div className="card">
                             <img src={logo} className="card-img-top" alt="Image" />
                             <div className="card-body">
-                                <p className='text-center text-white'><a href='#' className="card-title text-l font-medium">Card Title</a></p>
+                                <p className='text-center text-white'><a href='/test' className="card-title text-l font-medium">Card Title</a></p>
                             </div>
                         </div>
                         <div className="card">
                             <img src={logo} className="card-img-top" alt="Image" />
                             <div className="card-body">
-                                <p className='text-center text-white'><a href='#' className="card-title text-l font-medium">Card Title</a></p>
+                                <p className='text-center text-white'><a href='/test' className="card-title text-l font-medium">Card Title</a></p>
                             </div>
                         </div>
                         <div className="card">
                             <img src={logo} className="card-img-top" alt="Image" />
                             <div className="card-body">
-                                <p className='text-center text-white'><a href='#' className="card-title text-l font-medium">Card Title</a></p>
+                                <p className='text-center text-white'><a href='/test' className="card-title text-l font-medium">Card Title</a></p>
                             </div>
                         </div>
                         <div className="card">
                             <img src={logo} className="card-img-top" alt="Image" />
                             <div className="card-body">
-                                <p className='text-center text-white'><a href='#' className="card-title text-l font-medium">Card Title</a></p>
+                                <p className='text-center text-white'><a href='/test' className="card-title text-l font-medium">Card Title</a></p>
                             </div>
                         </div>
                         <div className="card">
                             <img src={logo} className="card-img-top" alt="Image" />
                             <div className="card-body">
-                                <p className='text-center text-white'><a href='#' className="card-title text-l font-medium">Card Title</a></p>
+                                <p className='text-center text-white'><a href='/test' className="card-title text-l font-medium">Card Title</a></p>
                             </div>
                         </div>
                         <div className="card">
                             <img src={logo} className="card-img-top" alt="Image" />
                             <div className="card-body">
-                                <p className='text-center text-white'><a href='#' className="card-title text-l font-medium">Card Title</a></p>
+                                <p className='text-center text-white'><a href='/test' className="card-title text-l font-medium">Card Title</a></p>
                             </div>
                         </div>
                     </div>
