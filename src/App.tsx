@@ -6,6 +6,7 @@ import Register from "./views/Register";
 import Login from "./views/Login";
 import Vehicles from "./views/Vehicles";
 import People from "./views/people";
+import Planets from "./views/Planets";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/vehicle" element={<Vehicles />} />
       <Route path="/characters" element={<People />} />
-
+      <Route path="/planets" element={<Planets />} />
     </Routes>
   );
 }
