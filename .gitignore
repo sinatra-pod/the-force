@@ -20,7 +20,6 @@
 .env.development.local
 .env.test
 .env.production.local
-/views/people.tsx
 
 npm-debug.log*
 yarn-debug.log*
