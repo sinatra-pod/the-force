@@ -1,8 +1,49 @@
 import React from 'react'
+import { FaInstagram, FaFacebook, FaTwitter, FaUser, FaSearch } from 'react-icons/fa';
+import logo from '../images/starwarslogo.png';
 
 function Films() {
   return (
       <div className='bg-black text-white'>
+          <nav className="grid justify-center p-6">
+            <div className='flex-row flex items-stretch'>
+                <span  className=''>
+                    <form className="flex justify-end p-6 mt-8 rounded-full bg-black">
+                    <button type="submit" className="btn-search ml-0 py-2 text-white rounded-full">
+                            <FaSearch />
+                        </button>
+                        <input type="text" name='search' className="bg-black text-white outline-none focus:shadow-outline px-4 py-2 w-full" placeholder="Search..." />
+                    </form>
+                </span>
+                <div className=''>
+                    {/* <img src={logo} alt="Logo" className=''/> */}
+                </div>
+                <div className='flex space-x-2 mt-10 lg:ml-auto sm:ml-96 text-white'>
+                    <ul>
+                    <li className='mt-8'><FaUser /></li>
+                    <li>Sign In</li>
+                    </ul>
+                </div>
+            </div>
+                <div className="w-full block lg:flex lg:w-auto">
+                    <div className="lg:space-x-52 text-sm font-medium leading-8 tracking-0 text-white hover:text-teal-200 ">
+                        <a href="/test" className="block mt-4 lg:inline-block lg:mt-0 ">
+                            FILMS
+                        </a>
+                        <a href="/test" className="block mt-4 lg:inline-block lg:mt-0">
+                            CHARACTERS
+                        </a>
+                        <a href="/test" className="block mt-4 lg:inline-block lg:mt-0">
+                            SERIES
+                        </a>
+                        <a href="/test" className="block mt-4 lg:inline-block lg:mt-0">
+                            DATABANK
+                        </a>
+                    </div>
+
+                </div>
+
+            </nav> 
           <h1 className="text-4xl mt-10 ">Star Wars Films</h1>
 
           <div className='text-center'>
@@ -50,6 +91,17 @@ function Films() {
                     
                 </div>
           </div>
+
+
+          <div className='footer m-auto mt-5'>
+                <div className='border-b-2 border-white m-auto w-11/12 ' />
+                <div className="flex flex justify-center space-x-10 m-auto mt-8 text-2xl text-white">
+                    <FaTwitter />
+                    <FaFacebook />
+                    <FaInstagram />
+                </div>
+                <p className='text-xl text-white text-center mt-8'>Sinatra Pod</p>
+            </div>
 
 
         </div>
