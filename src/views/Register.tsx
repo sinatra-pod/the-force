@@ -13,6 +13,7 @@ function Register() {
               <a className="border shadow-lg hover:shadow-xl px-6 py-2 flex items-center" href="/facebook"><AiFillFacebook className="mr-2" /> Facebook</a>
           </div>
           <div className="flex flex-col mb-4">
+            
             <label>Email</label>
             <input type="email" className="border relative bg-gray-100 p-2" />
           </div >
