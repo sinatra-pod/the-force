@@ -1,7 +1,6 @@
-import React, {FormEvent, useState} from "react";
+import React, {useState} from "react";
 import {FcGoogle} from "react-icons/fc";
 import {GoMarkGithub} from 'react-icons/go';
-import {AiFillFacebook} from "react-icons/ai";
 import {Link} from "react-router-dom";
 import {AuthType, useSocialAuth} from "../hooks/auth/useSocialAuth";
 import {useEmailPasswordAuth} from "../hooks/auth/useEmailPasswordAuth";
@@ -26,9 +25,6 @@ function Login() {
             </button>
             <button className="border shadow-lg hover:shadow-xl px-6 py-2 flex items-center" onClick={useSocialAuth(AuthType.GITHUB)}>
               <GoMarkGithub className="mr-2"  /> GitHub
-            </button>
-            <button className="border shadow-lg hover:shadow-xl px-6 py-2 flex items-center">
-              <AiFillFacebook className="mr-2" /> Facebook
             </button>
           </div>
           <div className="flex flex-col mb-4">
