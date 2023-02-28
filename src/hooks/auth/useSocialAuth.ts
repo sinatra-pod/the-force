@@ -1,6 +1,13 @@
 import {signInWithPopup, GoogleAuthProvider, GithubAuthProvider} from "firebase/auth";
 import { auth } from "../../utils/firebase";
 import { useNavigate } from "react-router-dom";
+import {storeUser} from "../../utils/authData";
+
+export enum AuthType {
+    GOOGLE = 0,
+    GITHUB = 1,
+    FACEBOOK = 2
+}
 
 export const useSocialAuth = (type: AuthType = 0) => {
     const navigate = useNavigate()
@@ -20,14 +27,11 @@ export const useSocialAuth = (type: AuthType = 0) => {
 
     return async () => {
         if(provider) await signInWithPopup(auth, provider)
-            .then((_r) => { navigate('/') })
+            .then((credential) => {
+                storeUser(credential.user.email)
+                navigate('/')
+            })
             .catch((_e) => false)
     }
 
-}
-
-export enum AuthType {
-    GOOGLE = 0,
-    GITHUB = 1,
-    FACEBOOK = 2
 }
