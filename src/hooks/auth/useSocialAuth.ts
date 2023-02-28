@@ -2,7 +2,7 @@ import {signInWithPopup, GoogleAuthProvider, GithubAuthProvider} from "firebase/
 import { auth } from "../../utils/firebase";
 import { useNavigate } from "react-router-dom";
 
-export const useAuth = (type: AuthType = 0) => {
+export const useSocialAuth = (type: AuthType = 0) => {
     const navigate = useNavigate()
 
     // set provider
