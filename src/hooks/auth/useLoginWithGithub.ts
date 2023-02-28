@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { GithubAuthProvider, signInWithPopup } from "firebase/auth";
-import { auth } from "../utils/firebase";
+import { auth } from "../../utils/firebase";
 import { useCallback, useState } from "react";
 
 export const useLoginWithGithub = () => {
