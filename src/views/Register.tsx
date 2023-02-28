@@ -1,33 +1,13 @@
 import React, {FormEvent} from "react";
-// import {Link} from 'react-router-dom'
-import { FcGoogle } from "react-icons/fc";
-import { AiFillFacebook } from "react-icons/ai";
-import {Link, useNavigate} from "react-router-dom";
+import {FcGoogle} from "react-icons/fc";
+import {AiFillFacebook} from "react-icons/ai";
 import {GoMarkGithub} from "react-icons/go";
-import {GoogleAuthProvider, signInWithPopup} from "firebase/auth";
-import {auth} from "../utils/firebase";
+import {Link} from "react-router-dom";
 import {useLoginWithGithub} from "../hooks/auth/useLoginWithGithub";
+import {useLoginWithGoogle} from "../hooks/auth/useLoginWithGoogle";
 
 function Register() {
-  const navigate: any = useNavigate();
-  const provider: any= new GoogleAuthProvider();
-  provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-
   const {loginWithGithub, error:gitHubLoginError} = useLoginWithGithub()
-  const onLogin = async () => {
-    await signInWithPopup(auth, provider)
-        .then((result: any) =>{
-          // const credential: any | null = GoogleAuthProvider.credentialFromResult(result);
-          // const token = credential.accessToken;
-          // const user = result.user
-          navigate("/")
-
-        }).catch((error: any)=>{
-          // const email = error.customData./email;
-          // const credential: any | null = GoogleAuthProvider.credentialFromError(error);
-
-        })
-  };
 
   return (
     <div className="relative w-full h-screen bg-zinc-900/90">
@@ -36,7 +16,7 @@ function Register() {
               onSubmit={ (e: FormEvent<HTMLFormElement>) => e.preventDefault()}>
           <h2 className="text-4xl font-bold text-center py-4">THE FORCE</h2>
           <div className="flex justify-between py-8">
-            <button className="border shadow-lg hover:shadow-xl px-6 py-2 flex items-center" onClick={onLogin}>
+            <button className="border shadow-lg hover:shadow-xl px-6 py-2 flex items-center" onClick={useLoginWithGoogle()}>
               <FcGoogle className="mr-2"  /> Google
             </button>
             <button className="border shadow-lg hover:shadow-xl px-6 py-2 flex items-center" onClick={loginWithGithub}>
