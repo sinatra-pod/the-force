@@ -5,6 +5,8 @@ import Home from "./views/Home";
 import Register from "./views/Register";
 import Login from "./views/Login";
 import Person from "./views/Person";
+import FilmDetail from "./views/FilmDetail";
+import Planets from "./views/Planets";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Route path ="/person" element={<Person/>}>
         <Route path="/person/:id" element={<Person/>}/>
       </Route>
+      <Route path="/filmdetail" element={<FilmDetail />} />
+      <Route path="/planets" element={<Planets />} />
     </Routes>
   );
 }
