@@ -14,10 +14,17 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="ian/fixes" />
       </map>
     </option>
   </component>
@@ -40,10 +47,27 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/okush/WebstormProjects/the-force/node_modules/typescript/lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/eeyan/WebstormProjects/the-force/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/hooks/auth" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,6 +79,9 @@
       <workItem from="1674547960713" duration="6580000" />
       <workItem from="1674564788625" duration="3654000" />
       <workItem from="1674626251591" duration="10067000" />
+      <workItem from="1675231911941" duration="2010000" />
+      <workItem from="1675923084206" duration="920000" />
+      <workItem from="1677571545207" duration="15569000" />
     </task>
     <task id="LOCAL-00001" summary="CI: Setup Firebase PR &amp; Deploy">
       <created>1674627291680</created>
@@ -161,7 +188,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674645052903</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Auth: Resize forms and add Google Auth to register">
+      <created>1677573006593</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1677573006593</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Auth: Add login and register with email">
+      <created>1677591214501</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1677591214501</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +220,8 @@
     <MESSAGE value="CI: Updated workflow permissions v1" />
     <MESSAGE value="CI: Updated workflow permissions v2" />
     <MESSAGE value="CI: Updated workflow permissions v3" />
-    <option name="LAST_COMMIT_MESSAGE" value="CI: Updated workflow permissions v3" />
+    <MESSAGE value="Auth: Resize forms and add Google Auth to register" />
+    <MESSAGE value="Auth: Add login and register with email" />
+    <option name="LAST_COMMIT_MESSAGE" value="Auth: Add login and register with email" />
   </component>
 </project>
