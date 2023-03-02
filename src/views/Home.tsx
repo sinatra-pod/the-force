@@ -1,7 +1,12 @@
 import React from "react";
 import useHeader from "../hooks/useHeader";
+import {getUser} from "../utils/authData";
+import {useNavigate} from "react-router-dom";
 
 function Home() {
+
+    const navigate = useNavigate()
+    if (!getUser()) navigate('/login')
 
   // extract the header from the hook
   // Header extracted will be used to determine the current page
