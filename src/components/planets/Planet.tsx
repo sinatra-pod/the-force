@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Planet() {
-  const [openTab, setOpenTab] = React.useState(1);
+  // const [openTab, setOpenTab] = React.useState(1);
   const banner =
     "https://lumiere-a.akamaihd.net/v1/images/aa-9-coruscant-freighter_a856053d.jpeg?region=92%2C0%2C1181%2C665";
 
