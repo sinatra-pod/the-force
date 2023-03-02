@@ -1,8 +1,6 @@
 import React from "react";
 import { getUser } from "../utils/authData";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import FilmsList from "../components/Films/FilmsList";
 
 const films = [
@@ -32,7 +30,6 @@ function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
       <main className="flex-1 text-white mt-4">
         <section className="flex">
           <div className="w-[50%] px-20 py-2 space-y-10">
@@ -123,7 +120,6 @@ function Home() {
           <FilmsList films={films} />
         </section>
       </main>
-      <Footer />
     </div>
   );
 }
