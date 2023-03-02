@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a9d2bb7-8d45-4d8a-af1a-ea4141884bc8" name="Changes" comment="Starships: tmp CHANGE">
-      <change afterPath="$PROJECT_DIR$/src/components/starships/StarshipDetails.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/starships/StarshipItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Starships.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Starships.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+    <list default="true" id="9a9d2bb7-8d45-4d8a-af1a-ea4141884bc8" name="Changes" comment="Home: Reset original ui">
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +88,7 @@
       <workItem from="1677571545207" duration="15569000" />
       <workItem from="1677690405078" duration="4212000" />
       <workItem from="1677741057631" duration="2484000" />
-      <workItem from="1677747573547" duration="14360000" />
+      <workItem from="1677747573547" duration="15041000" />
     </task>
     <task id="LOCAL-00001" summary="CI: Setup Firebase PR &amp; Deploy">
       <created>1674627291680</created>
@@ -230,7 +223,21 @@
       <option name="project" value="LOCAL" />
       <updated>1677752429001</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Starships: Complete">
+      <created>1677765253981</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1677765253981</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Home: Reset original ui">
+      <created>1677765420770</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1677765420770</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +259,8 @@
     <MESSAGE value="Auth: Add login and register with email" />
     <MESSAGE value="Starships: Create Initial View" />
     <MESSAGE value="Starships: tmp CHANGE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starships: tmp CHANGE" />
+    <MESSAGE value="Starships: Complete" />
+    <MESSAGE value="Home: Reset original ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Home: Reset original ui" />
   </component>
 </project>

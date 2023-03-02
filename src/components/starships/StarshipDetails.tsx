@@ -28,7 +28,7 @@ export function StarshipDetails({ id, title, logo, description, speed, passenger
                     </div>
 
                     <div className={'p-6 space-y-6'}>
-                        <img className={'h-96 object-cover w-full'} src={logo}/>
+                        <img className={'h-96 object-cover w-full'} src={logo} alt={title}/>
                         <p className={'text-l text-white font-semibold'}>
                             {description}
                         </p>
