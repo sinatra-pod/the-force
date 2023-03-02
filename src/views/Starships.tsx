@@ -21,7 +21,7 @@ export function Starships(){
         <div className={'container mx-auto'}>
 
             <div className={'flex flex-col md:flex-row lg:flex-row mt-10'}>
-                <img className={'object-cover w-full h-[40vh]'} src={banner} alt={''}/>
+                <img className={'object-cover w-full md:w-[40vh] lg:w-[40vh] h-[40vh]'} src={banner} alt={''}/>
 
                 <div className={'w-full h-[40vh] m5 bg-[#EA2D1C1A]'}>
                     <div className={'flex flex-col'}>

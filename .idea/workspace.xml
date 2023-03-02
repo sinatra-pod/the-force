@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a9d2bb7-8d45-4d8a-af1a-ea4141884bc8" name="Changes" comment="StarshipDetail: Fix text padding.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/starships/StarshipDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/starships/StarshipDetails.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Starships.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Starships.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="9a9d2bb7-8d45-4d8a-af1a-ea4141884bc8" name="Changes" comment="Starship: Change banner height" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +87,7 @@
       <workItem from="1677690405078" duration="4212000" />
       <workItem from="1677741057631" duration="2484000" />
       <workItem from="1677747573547" duration="15881000" />
-      <workItem from="1677776141036" duration="373000" />
+      <workItem from="1677776141036" duration="557000" />
     </task>
     <task id="LOCAL-00001" summary="CI: Setup Firebase PR &amp; Deploy">
       <created>1674627291680</created>
@@ -268,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677775933883</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Starship: Change banner height">
+      <created>1677776627311</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1677776627311</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +299,7 @@
     <MESSAGE value="CI: Add alt to image" />
     <MESSAGE value="StarshipDetail: Add detail and routing." />
     <MESSAGE value="StarshipDetail: Fix text padding." />
-    <option name="LAST_COMMIT_MESSAGE" value="StarshipDetail: Fix text padding." />
+    <MESSAGE value="Starship: Change banner height" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starship: Change banner height" />
   </component>
 </project>
