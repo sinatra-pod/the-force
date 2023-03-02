@@ -17,7 +17,7 @@ const Navbar = () => {
           <div><Link to="/starships">Starships</Link></div>
         </div>
         <div className="">
-          <FaUserCircle className="text-4xl" />
+          <Link to='/login'><FaUserCircle className="text-4xl" /></Link>
         </div>
       </div>
     </div>

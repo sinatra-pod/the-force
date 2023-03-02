@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const FilmDetail = ({ film }: any) => {
+const FilmDetail = ({ film, image }: any) => {
 
   const navigate = useNavigate()
 
@@ -13,8 +13,9 @@ const FilmDetail = ({ film }: any) => {
     <div className="w-[300px]">
       <div>
         <img
-          src="https://images.unsplash.com/photo-1579935110464-fcd041be62d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fHN0YXIlMjB3YXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60"
+          src={image}
           alt="single film"
+          className="h-64  object-cover w-full"
         />
       </div>
 
