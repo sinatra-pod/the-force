@@ -34,7 +34,7 @@ function Header() {
             <a href="/planets" className="block mt-4 lg:inline-block lg:mt-0 ">
               FILMS
             </a>
-            <a href="/planets" className="block mt-4 lg:inline-block lg:mt-0">
+            <a href="/databanks" className="block mt-4 lg:inline-block lg:mt-0">
               CHARACTERS
             </a>
             <a href="/planets" className="block mt-4 lg:inline-block lg:mt-0">

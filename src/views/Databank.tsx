@@ -1,5 +1,5 @@
 import React from 'react'
-import SearchForm from '../form/SearchForm'
+import SearchForm from '../components/form/SearchForm'
 import { Link } from 'react-router-dom';
 
 function Databank() {

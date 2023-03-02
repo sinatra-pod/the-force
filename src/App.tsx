@@ -5,11 +5,11 @@ import Home from "./views/Home";
 import Register from "./views/Register";
 import Login from "./views/Login";
 import FilmDetail from "./views/FilmDetail";
-import Planets from "./components/planets/Planets";
+import Planets from "./views/Planets";
 
 import PlanetDetails from "./components/planets/PlanetDetails";
 import Header from "./components/Header";
-import Databank from "./components/databanks/Databank";
+import Databank from "./views/Databank";
 import DatabankDetails from "./components/databanks/DatabankDetails";
 
 function App() {

@@ -1,6 +1,6 @@
 import React from 'react';
-import Planet from './Planet';
-import SearchForm from '../form/SearchForm';
+import Planet from '../components/planets/Planet';
+import SearchForm from '../components/form/SearchForm';
 
 
 function Planets() {
