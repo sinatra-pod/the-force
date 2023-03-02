@@ -6,6 +6,7 @@ import Register from "./views/Register";
 import Login from "./views/Login";
 import FilmDetail from "./views/FilmDetail";
 import Planets from "./views/Planets";
+import {Starships} from "./views/Starships";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/filmdetail" element={<FilmDetail />} />
       <Route path="/planets" element={<Planets />} />
+      <Route path="/starships" element={<Starships/>} />
     </Routes>
   );
 }
