@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Character from "./views/Character";
 import CharacterDetails from "./components/characters/CharacterDetails";
+import {StarshipDetails} from "./components/starships/StarshipDetails";
 
 function App() {
   const { pathname } = useLocation();
@@ -32,6 +33,7 @@ function App() {
           <Route path="/character" element={<Character />} />
           <Route path="/character/:id" element={<CharacterDetails />} />
           <Route path="/starships" element={<Starships/>} />
+          <Route path="/starship/:id" element={<StarshipDetails />} />
         </Routes>
         <div>
           {pathname !== "/login" && <Footer /> && pathname !== "/register" && <Footer />}
