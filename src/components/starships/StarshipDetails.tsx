@@ -1,10 +1,10 @@
 import React from "react";
 import {starShips} from "../../views/Starships";
-import {useParams} from "react-router-dom";
+// import {useParams} from "react-router-dom";
 
 export function StarshipDetails() {
 
-    const { id } = useParams()
+    // const { id } = useParams()
     const { title, logo, description, speed, passengers, manufacturers, starshipClass, rating } = starShips[0]
 
     return (
@@ -61,7 +61,7 @@ export function StarshipDetails() {
                     </div>
                 </div>
 
-                <div className={'flex justify-between'}>
+                <div className={'flex justify-between mt-[5%]'}>
 
                     <h2 className={'text-sky-400 text-2xl mx-5 mt-[5%] border-4 border-sky-400 p-5 rounded-full hover:bg-sky-400 hover:text-white'}>
                         Yoda
