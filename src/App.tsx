@@ -6,7 +6,7 @@ import Register from "./views/Register";
 import Login from "./views/Login";
 import FilmDetail from "./views/FilmDetail";
 import Planets from "./views/Planets";
-
+import {Starships} from "./views/Starships";
 import PlanetDetails from "./components/planets/PlanetDetails";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -31,14 +31,13 @@ function App() {
           <Route path="/planet/:id" element={<PlanetDetails />} />
           <Route path="/character" element={<Character />} />
           <Route path="/character/:id" element={<CharacterDetails />} />
-
+          <Route path="/starships" element={<Starships/>} />
         </Routes>
         <div>
           {pathname !== "/login" && <Footer /> && pathname !== "/register" && <Footer />}
         </div>
       </div>
     </>
-
   );
 }
 
