@@ -1,6 +1,6 @@
 import React from 'react'
 
-function DatabankDetails() {
+function CharacterDetails() {
   return (
     <div className="bg-black w-full min-h-screen mb-0">
       <div className='border-b-2  border-white  m-auto w-11/12 mt-4' />
@@ -31,4 +31,4 @@ function DatabankDetails() {
     </div>
   )
 }
-export default DatabankDetails
+export default CharacterDetails

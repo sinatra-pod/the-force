@@ -9,8 +9,8 @@ import Planets from "./views/Planets";
 
 import PlanetDetails from "./components/planets/PlanetDetails";
 import Navbar from "./components/Navbar";
-import Databank from "./views/Databank";
-import DatabankDetails from "./components/databanks/DatabankDetails";
+import Character from "./views/Character";
+import CharacterDetails from "./components/characters/CharacterDetails";
 
 function App() {
   const { pathname } = useLocation();
@@ -28,8 +28,8 @@ function App() {
           <Route path="/filmdetail" element={<FilmDetail />} />
           <Route path="/planets" element={<Planets />} />
           <Route path="/planet/:id" element={<PlanetDetails />} />
-          <Route path="/databanks" element={<Databank />} />
-          <Route path="/databank/:id" element={<DatabankDetails />} />
+          <Route path="/character" element={<Character />} />
+          <Route path="/character/:id" element={<CharacterDetails />} />
 
         </Routes>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { FaUserCircle } from "react-icons/fa";
 import Logo from "../images/starwarslogo.png";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -10,10 +11,10 @@ const Navbar = () => {
           <img src={Logo} alt="Starwars Logo" />
         </div>
         <div className="flex gap-12 font-extralight text-lg">
-          <div>Home</div>
-          <div>People</div>
-          <div>Vehicles</div>
-          <div>Planets</div>
+          <div><Link to="/">Films</Link></div>
+          <div><Link to="/character">Characters</Link></div>
+          <div><Link to="/planets">Planets</Link></div>
+          <div><Link to="/starships">Starships</Link></div>
         </div>
         <div className="">
           <FaUserCircle className="text-4xl" />

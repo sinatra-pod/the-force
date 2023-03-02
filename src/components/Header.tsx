@@ -38,10 +38,10 @@ function Header() {
               CHARACTERS
             </a>
             <a href="/planets" className="block mt-4 lg:inline-block lg:mt-0">
-              SERIES
+              Planets
             </a>
             <a href="/databanks" className="block mt-4 lg:inline-block lg:mt-0">
-              DATABANK
+              Starship
             </a>
           </div>
 
