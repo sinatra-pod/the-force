@@ -4,7 +4,7 @@ import {useData} from "../../hooks/data/useData";
 import {gql} from "@apollo/client";
 import {AppLoader} from "../AppLoader";
 import {AppError} from "../AppError";
-import {shipDescriptions, shipsImages, starShipInfo} from "../../utils/starwarimages";
+import {starShipInfo} from "../../utils/starwarimages";
 
 export function StarshipDetails() {
 
