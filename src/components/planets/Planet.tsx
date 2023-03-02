@@ -79,7 +79,6 @@ function Planet() {
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space">
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <h1 className='text-white'>First Tab</h1>
                   <div className="w-full gap-4 flex-wrap flex justify-center items-center">
                     {planets.map((planet) => (
                       <div className={'flex flex-col'}>
@@ -97,7 +96,6 @@ function Planet() {
 
               </div>
               <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                <h1 className='text-white'>Second  Tab</h1>
                 <div className="w-full gap-4 flex-wrap flex justify-center items-center">
                   {planets.map((planet) => (
                     <div className={'flex flex-col'}>
@@ -113,8 +111,6 @@ function Planet() {
                 </div>
               </div>
               <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                <h1 className='text-white' >third Tab</h1>
-
                 <div className="w-full gap-4 flex-wrap flex justify-center items-center">
                   {planets.map((planet) => (
                     <div className={'flex flex-col'}>
