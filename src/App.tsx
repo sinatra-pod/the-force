@@ -9,6 +9,7 @@ import Planets from "./views/Planets";
 
 import PlanetDetails from "./components/planets/PlanetDetails";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Character from "./views/Character";
 import CharacterDetails from "./components/characters/CharacterDetails";
 
@@ -32,6 +33,9 @@ function App() {
           <Route path="/character/:id" element={<CharacterDetails />} />
 
         </Routes>
+        <div>
+          {pathname !== "/login" && <Footer /> && pathname !== "/register" && <Footer />}
+        </div>
       </div>
     </>
 

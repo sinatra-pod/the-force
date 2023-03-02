@@ -122,7 +122,6 @@ function Home() {
           <FilmsList films={films} />
         </section>
       </main>
-      <Footer />
     </div>
   );
 }
