@@ -1,5 +1,4 @@
 import React from "react";
-import useHeader from "../hooks/useHeader";
 import { getUser } from "../utils/authData";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
