@@ -1,68 +1,91 @@
 import React from "react";
+import {starShips} from "../../views/Starships";
+import {useParams} from "react-router-dom";
 
-export function StarshipDetails({ id, title, logo, description, speed, passengers, manufacturers, starshipClass, rating }) {
+export function StarshipDetails() {
+
+    const { id } = useParams()
+    const { title, logo, description, speed, passengers, manufacturers, starshipClass, rating } = starShips[0]
+
     return (
-        <div id={id}
-             tabIndex={-1}
-             aria-hidden={true}
-             className={'fixed top-0 left-0 right-0 z-50 hidden w-full p-4 ' +
-                 'overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full'}>
+        <div className="bg-black w-full min-h-screen mb-0">
 
-            <div className={'relative w-full h-full max-w-2xl md:h-auto'}>
+            <div className='border-b-2  border-white  m-auto w-11/12 mt-4' />
+            <div className='container mx-auto mt-10 text-white flex  flex-col'>
 
-                <div className={'relative bg-[#000000] rounded-lg shadow'}>
+                <div className="md:flex items-start justify-center py-12 2xl:px-20 md:px-6 px-4">
 
-                    <div className={'flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600'}>
-                        <h3 className={'text-4xl font-semibold text-white'}>
-                            {title}
-                        </h3>
-
-                        <button type="button" className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900
-                        rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                                data-modal-hide={id}>
-                            <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
-                            <span className="sr-only">Close modal</span>
-                        </button>
+                    <div className="xl:w-2/5 lg:w-2/5 md:w1/2 w-80 md:block h-fit">
+                        <img src={logo} alt='banner' className="w-full object-cover h-96 hover:object-scale-down" />
                     </div>
 
-                    <div className={'p-6 space-y-6'}>
-                        <img className={'h-96 object-cover w-full'} src={logo} alt={title}/>
-                        <p className={'text-l text-white font-semibold'}>
-                            {description}
-                        </p>
+                    <div className="xl:w-3/5 md:w-1/2 lg:w-3/5 lg:ml-8 md:ml-6 md:mt-0 mt-6">
 
-                        <div className={'flex flex-row'}>
-                            <p className={'text-2xl font-bold text-[#E02312]'}>SPEED :</p>
-                            <p className={'text-white text-xl justify-center ml-4'}>{speed}</p>
+                        <div className="border-b border-gray-200 pb-6">
+                            <h1 className="lg:text-4xl text-xl font-semibold lg:leading-6 leading-7 text-white dark:text-white mt-2">
+                                {title}
+                            </h1>
                         </div>
 
-                        <div className={'flex flex-row'}>
-                            <p className={'text-2xl font-bold text-[#E02312]'}>NO. PASSENGERS :</p>
-                            <p className={'text-white text-xl justify-center ml-4'}>{passengers}</p>
-                        </div>
+                        <div className={'mt-5'}>
+                            <div className={'flex flex-row'}>
+                                <p className={'text-2xl font-bold text-[#E02312]'}>SPEED :</p>
+                                <p className={'text-white text-xl justify-center ml-4'}>{speed}</p>
+                            </div>
 
-                        <div className={'flex flex-row'}>
-                            <p className={'text-2xl font-bold text-[#E02312]'}>MANUFACTURERS :</p>
-                            <p className={'text-white text-xl justify-center ml-4'}>{manufacturers}</p>
-                        </div>
+                            <div className={'flex flex-row mt-2'}>
+                                <p className={'text-2xl font-bold text-[#E02312]'}>NO. PASSENGERS :</p>
+                                <p className={'text-white text-xl justify-center ml-4'}>{passengers}</p>
+                            </div>
 
-                        <div className={'flex flex-row'}>
-                            <p className={'text-2xl font-bold text-[#E02312]'}>CLASS :</p>
-                            <p className={'text-white text-xl justify-center ml-4'}>{starshipClass}</p>
-                        </div>
+                            <div className={'flex flex-row mt-2'}>
+                                <p className={'text-2xl font-bold text-[#E02312]'}>MANUFACTURERS :</p>
+                                <p className={'text-white text-xl justify-center ml-4'}>{manufacturers}</p>
+                            </div>
 
-                        <div className={'flex flex-row'}>
-                            <p className={'text-2xl font-bold text-[#E02312]'}>RATING :</p>
-                            <p className={'text-white text-xl justify-center ml-4'}>{rating}/5</p>
-                        </div>
+                            <div className={'flex flex-row mt-2'}>
+                                <p className={'text-2xl font-bold text-[#E02312]'}>CLASS :</p>
+                                <p className={'text-white text-xl justify-center ml-4'}>{starshipClass}</p>
+                            </div>
 
+                            <div className={'flex flex-row mt-2'}>
+                                <p className={'text-2xl font-bold text-[#E02312]'}>RATING :</p>
+                                <p className={'text-white text-xl justify-center ml-4'}>{rating}/5</p>
+                            </div>
+
+                            <p className="xl:pr-48 text-xl lg:leading-tight leading-normal text-gray-600 dark:text-gray-300 mt-7">
+                                {description}
+                            </p>
+
+                        </div>
                     </div>
+                </div>
 
-                    <div className="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                        <button data-modal-hide={id} type="button" className="border border-2 rounded-2xl border-[#E02312] text-white p-4 hover:bg-[#E02312] w-max font-semibold">CLOSE</button>
-                    </div>
+                <div className={'flex justify-between'}>
+
+                    <h2 className={'text-sky-400 text-2xl mx-5 mt-[5%] border-4 border-sky-400 p-5 rounded-full hover:bg-sky-400 hover:text-white'}>
+                        Yoda
+                    </h2>
+
+                    <h2 className={'text-yellow-200 text-2xl mx-5 mt-[5%] border-4 border-yellow-200 p-5 rounded-full hover:bg-yellow-200 hover:text-black'}>
+                        Empire strikes back
+                    </h2>
+
+                    <h2 className={'text-teal-500 text-2xl mx-5 mt-[5%] border-4 border-teal-500 p-5 rounded-full hover:bg-teal-500 hover:text-white'}>
+                        Crosshair
+                    </h2>
+
+                    <h2 className={'text-rose-500 text-2xl mx-5 mt-[5%] border-4 border-rose-500 p-5 rounded-full hover:bg-rose-500 hover:text-white'}>
+                        Mandalorian
+                    </h2>
+
+                    <h2 className={'text-orange-500 text-2xl mx-5 mt-[5%] border-4 border-orange-500 p-5 rounded-full hover:bg-orange-500 hover:text-white'}>
+                        Ryloth
+                    </h2>
+
+                    <h2 className={'text-teal-500 text-2xl mx-5 mt-[5%] border-4 border-teal-500 p-5 rounded-full hover:bg-teal-500 hover:text-white'}>
+                        Luke Skywalker
+                    </h2>
 
                 </div>
 
