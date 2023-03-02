@@ -1,9 +1,13 @@
 import React from "react";
 // import SearchForm from "../components/form/SearchForm";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Databank() {
-  const banner = 'https://lumiere-a.akamaihd.net/v1/images/aa-9-coruscant-freighter_a856053d.jpeg?region=92%2C0%2C1181%2C665'
+  const navigate = useNavigate();
+
+  const banner =
+    "https://lumiere-a.akamaihd.net/v1/images/aa-9-coruscant-freighter_a856053d.jpeg?region=92%2C0%2C1181%2C665";
 
   const characters = [
     {
@@ -42,11 +46,20 @@ function Databank() {
         "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
     },
   ];
+
+  const handleSubmit = (item: any) => {
+    navigate(`/character/${item.id}`);
+  };
+
   return (
     <div className="bg-black container mx-auto w-full min-h-screen mb-0">
-      <section className="flex">
+      <section className="flex py-20">
         <div className="w-[40%]">
-        <img className={'object-cover w-full h-[40vh]'} src={banner} alt={''}/>
+          <img
+            className={"object-cover w-full h-[40vh]"}
+            src={banner}
+            alt={""}
+          />
         </div>
         <div className="w-[60%] text-white bg-[#EA2D1C1A] px-4">
           <h2 className="text-3xl font-semibold uppercase my-4">Star Wars</h2>
@@ -71,7 +84,7 @@ function Databank() {
         </div>
       </section>
       <div className="mt-10 w-full">
-        <h2 className="text-red-900 font-semibold text-lg my-2 uppercase">
+        <h2 className="text-red-900 font-semibold text-xl my-2 uppercase">
           All Characters
         </h2>
         <div className="flex h-auto py-8 items-center justify-center w-full">
@@ -83,15 +96,12 @@ function Databank() {
                   src={character.image}
                   alt={""}
                 />
-                <h1 className={"text-lg text-white mt-4"}>{character.title}</h1>
-                <Link
-                  to={`/character/${character.id}`}
-                  className={
-                    "border border-2 rounded-md mt-4 border-[#E02312] text-white p-2 hover:bg-[#E02312] w-max"
-                  }
-                >
-                  WATCH PREVIEW
-                </Link>
+                <h1 className={"text-lg text-white my-4"}>{character.title}</h1>
+                <button onClick={() => handleSubmit(character)} className="relative text-white w-[80%] inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-red-900 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200">
+                  <span className="relative text-white w-[100%] px-5 py-4 transition-all ease-in duration-75 bg-black rounded-md group-hover:bg-opacity-0">
+                    Character Details
+                  </span>
+                </button>
               </div>
             ))}
           </div>

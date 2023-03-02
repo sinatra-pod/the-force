@@ -1,8 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Planet() {
   // const [openTab, setOpenTab] = React.useState(1);
+  const navigate = useNavigate();
   const banner =
     "https://lumiere-a.akamaihd.net/v1/images/aa-9-coruscant-freighter_a856053d.jpeg?region=92%2C0%2C1181%2C665";
 
@@ -64,6 +66,11 @@ function Planet() {
         "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
     },
   ];
+
+  const handleSubmit = (item: any) => {
+    navigate(`/character/${item.id}`);
+  };
+
   return (
     <>
       <div className="bg-black container mx-auto w-full min-h-screen mb-0">
@@ -111,17 +118,14 @@ function Planet() {
                     src={character.image}
                     alt={""}
                   />
-                  <h1 className={"text-lg text-white mt-4"}>
+                  <h1 className={"text-lg text-white my-4"}>
                     {character.title}
                   </h1>
-                  <Link
-                    to={`/character/${character.id}`}
-                    className={
-                      "border border-2 rounded-md mt-4 border-[#E02312] text-white p-2 hover:bg-[#E02312] w-max"
-                    }
-                  >
-                    WATCH PREVIEW
-                  </Link>
+                  <button onClick={() => handleSubmit(character)} className="relative text-white w-[60%] inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-red-900 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200">
+                    <span className="relative text-white w-[100%] px-5 py-4 transition-all ease-in duration-75 bg-black rounded-md group-hover:bg-opacity-0">
+                      Planet Details
+                    </span>
+                  </button>
                 </div>
               ))}
             </div>
