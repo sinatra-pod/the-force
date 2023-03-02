@@ -87,7 +87,7 @@ export function Starships(){
     })
 
     return (
-        <div className={'container mx-auto'}>
+        <div className={'container mx-auto pb-10'}>
             <div>
                 {shipDetails}
             </div>

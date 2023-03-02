@@ -1,138 +1,134 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Planet() {
   const [openTab, setOpenTab] = React.useState(1);
+  const banner =
+    "https://lumiere-a.akamaihd.net/v1/images/aa-9-coruscant-freighter_a856053d.jpeg?region=92%2C0%2C1181%2C665";
+
   const planets = [
-    { id: 1, title: "The Phantom Menace", image: "https://i.postimg.cc/0ybdytWT/download.jpg", description: "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics" },
-    { id: 2, title: "The Phantom Menace", image: "https://i.postimg.cc/0ybdytWT/download.jpg", description: "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics" },
-    { id: 3, title: "The Phantom Menace", image: "https://i.postimg.cc/0ybdytWT/download.jpg", description: "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics" },
-    { id: 4, title: "The Phantom Menace", image: "https://i.postimg.cc/0ybdytWT/download.jpg", description: "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics" },
-    { id: 5, title: "The Phantom Menace", image: "https://i.postimg.cc/0ybdytWT/download.jpg", description: "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics" },
-    { id: 6, title: "The Phantom Menace", image: "https://i.postimg.cc/0ybdytWT/download.jpg", description: "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics" },
-    { id: 7, title: "The Phantom Menace", image: "https://i.postimg.cc/0ybdytWT/download.jpg", description: "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics" },
-    { id: 8, title: "The Phantom Menace", image: "https://i.postimg.cc/0ybdytWT/download.jpg", description: "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics" }
-  ]
+    {
+      id: 1,
+      title: "The Phantom Menace",
+      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
+      description:
+        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
+    },
+    {
+      id: 2,
+      title: "The Phantom Menace",
+      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
+      description:
+        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
+    },
+    {
+      id: 3,
+      title: "The Phantom Menace",
+      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
+      description:
+        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
+    },
+    {
+      id: 4,
+      title: "The Phantom Menace",
+      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
+      description:
+        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
+    },
+    {
+      id: 5,
+      title: "The Phantom Menace",
+      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
+      description:
+        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
+    },
+    {
+      id: 6,
+      title: "The Phantom Menace",
+      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
+      description:
+        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
+    },
+    {
+      id: 7,
+      title: "The Phantom Menace",
+      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
+      description:
+        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
+    },
+    {
+      id: 8,
+      title: "The Phantom Menace",
+      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
+      description:
+        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
+    },
+  ];
   return (
     <>
-      <div className="flex flex-wrap min-h-full min-w-full bg-black	">
-        <div className="w-full flex bg-black">
-          <div className='flex text-white flex-row text-center min-h-full w-1/5'>
-            <ul
-              className="mb-0 list-none p pt-3 pb-4 block"
-              role="tablist"
-            >
-              <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                <a
-                  className={
-                    "text-xs font-bold uppercase px-5 py-3 block leading-normal "
-
-                  }
-                  onClick={e => {
-                    e.preventDefault();
-                    setOpenTab(1);
-                  }}
-                  data-toggle="tab"
-                  href="#link1"
-                  role="tablist"
-                >
-                  <i className="fas fa-space-shuttle text-base mr-1"></i> All Films
-                </a>
-              </li>
-              <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                <a
-                  className={
-                    "text-xs font-bold uppercase px-5 py-3  block leading-normal "
-                  }
-                  onClick={e => {
-                    e.preventDefault();
-                    setOpenTab(2);
-                  }}
-                  data-toggle="tab"
-                  href="#link2"
-                  role="tablist"
-                >
-                  <i className="fas fa-cog text-base mr-1"></i>  Realease By Year
-                </a>
-              </li>
-              <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                <a
-                  className={
-                    "text-xs font-bold uppercase px-5 py-3  block leading-normal "
-                  }
-                  onClick={e => {
-                    e.preventDefault();
-                    setOpenTab(3);
-                  }}
-                  data-toggle="tab"
-                  href="#link3"
-                  role="tablist"
-                >
-                  <i className="fas fa-briefcase text-base mr-1"></i>  Genre
-                </a>
-              </li>
-            </ul>
+      <div className="bg-black container mx-auto w-full min-h-screen mb-0">
+        <section className="flex py-20">
+          <div className="w-[40%]">
+            <img
+              className={"object-cover w-full h-[40vh]"}
+              src={banner}
+              alt={""}
+            />
           </div>
-          <div className="relative flex flex-col min-w-0 break-words  w-full mb-6 shadow-lg rounded min-h-full w-4/5">
-            <div className="px-4 py-5 flex-auto">
-              <div className="tab-content tab-space">
-                <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <div className="w-full gap-4 flex-wrap flex justify-center items-center">
-                    {planets.map((planet) => (
-                      <div className={'flex flex-col'}>
-                        <img className={'object-cover h-96 rounded-t-lg'} src={planet.image} alt={''} />
-                        <h1 className={'text-2xl px-1 text-white'}>
-                          {planet.title}
-                        </h1>
-                        <Link to={`/planet/${planet.id}`} className={'border border-2 rounded-md mt-4 border-[#E02312] text-white p-2 hover:bg-[#E02312] w-max'}>
-                          WATCH PREVIEW
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+          <div className="w-[60%] text-white bg-[#EA2D1C1A] px-4">
+            <h2 className="text-3xl font-semibold uppercase my-4">Star Wars</h2>
 
-              </div>
-              <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                <div className="w-full gap-4 flex-wrap flex justify-center items-center">
-                  {planets.map((planet) => (
-                    <div className={'flex flex-col'}>
-                      <img className={'object-cover h-96 rounded-t-lg'} src={planet.image} alt={''} />
-                      <h1 className={'text-2xl px-1 text-white'}>
-                        {planet.title}
-                      </h1>
-                      <Link to={`/planet/${planet.id}`} className={'border border-2 rounded-md mt-4 border-[#E02312] text-white p-2 hover:bg-[#E02312] w-max'}>
-                        WATCH PREVIEW
-                      </Link>
-                    </div>
-                  ))}
+            <div className="space-y-8">
+              <p className="font-extralight text-lg">
+                "Star Wars" is a space opera franchise created by George Lucas
+                that revolves around a group of rebels fighting against an evil
+                empire. The franchise includes multiple films, books, comics,
+                and other media. The original "Star Wars" trilogy, released in
+                the late 1970s and early 1980s, tells the story of Luke
+                Skywalker and his journey to become a Jedi and defeat the
+                Empire.
+              </p>
+              <p className="font-extralight text-lg">
+                In the prequel trilogy, the backstory of Darth Vader is
+                explored. The prequels follow Jedi Knight Qui-Gon Jinn and his
+                apprentice Obi-Wan Kenobi as they encounter a young Anakin
+                Skywalker, who eventually becomes Darth Vader. The prequels show
+                the Republic's downfall and the rise of the Empire.
+              </p>
+            </div>
+          </div>
+        </section>
+        <div className="mt-10 w-full">
+          <h2 className="text-red-900 font-semibold text-lg my-2 uppercase">
+            All Characters
+          </h2>
+          <div className="flex h-auto py-8 items-center justify-center w-full">
+            <div className="w-full gap-8 flex-wrap flex justify-start items-center">
+              {planets.map((character) => (
+                <div className={"flex flex-col"}>
+                  <img
+                    className={"object-cover h-96 rounded-t-lg"}
+                    src={character.image}
+                    alt={""}
+                  />
+                  <h1 className={"text-lg text-white mt-4"}>
+                    {character.title}
+                  </h1>
+                  <Link
+                    to={`/character/${character.id}`}
+                    className={
+                      "border border-2 rounded-md mt-4 border-[#E02312] text-white p-2 hover:bg-[#E02312] w-max"
+                    }
+                  >
+                    WATCH PREVIEW
+                  </Link>
                 </div>
-              </div>
-              <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                <div className="w-full gap-4 flex-wrap flex justify-center items-center">
-                  {planets.map((planet) => (
-                    <div className={'flex flex-col'}>
-                      <img className={'object-cover h-96 rounded-t-lg'} src={planet.image} alt={''} />
-                      <h1 className={'text-2xl px-1 text-white'}>
-                        {planet.title}
-                      </h1>
-                      <Link to={`/planet/${planet.id}`} className={'border border-2 rounded-md mt-4 border-[#E02312] text-white p-2 hover:bg-[#E02312] w-max'}>
-                        WATCH PREVIEW
-                      </Link>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
     </>
-
-
-  )
-
-
+  );
 }
-export default Planet
+export default Planet;
