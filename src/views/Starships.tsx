@@ -87,7 +87,7 @@ export function Starships(){
     })
 
     return (
-        <div className={'container mx-auto'}>
+        <div className={'container mx-auto py-20 pb-10'}>
             <div>
                 {shipDetails}
             </div>
@@ -100,16 +100,16 @@ export function Starships(){
                         <h2 className={'text-4xl px-4 md:pt-5 lg:pt-5 text-[#E0E0E0] font-extrabold'}>
                             INTERSTELLAR TRAVEL
                         </h2>
-                        <p className={'text pt-2 px-4 text-[#BDBDBD] font-regular tracking-wide'}>
+                        <p className={'text-lg pt-2 px-4 text-[#BDBDBD] font-extralight tracking-wide'}>
                             A starship, also known as a starcruiser, spaceship, spacecraft, or simply just craft or ship,
-                            was a vessel designed for interstellar travel, specifically between star systems.<br/>
+                            was a vessel designed for interstellar travel, specifically between star systems.
 
                             Starships were distinguished by the inclusion of a hyperdrive,
                             a piece of equipment that made hyperspace travel possible. <br/><br/>
 
                             Interstellar flight became possible with the invention of the dual-drive system.
                             Starships used sublight drives to leave a planet's gravity well and the hyperdrive
-                            to travel between stars faster than light speed.<br/>
+                            to travel between stars faster than light speed.
 
                             Plotting a course to a star system was a highly complex operation.
                             Calculations to travel at light speed were left up to a navigation computer
@@ -119,7 +119,7 @@ export function Starships(){
                 </div>
             </div>
 
-            <h2 className={'text-4xl px-1 mt-20 mb-2 font-extrabold'}>
+            <h2 className={'text-red-900 font-semibold text-xl mt-20 uppercase'}>
                 ALL ABOARD THE STARSHIP
             </h2>
 
