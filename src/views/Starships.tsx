@@ -9,6 +9,7 @@ export function Starships(){
     const ships = starShips.map((ship) => {
         return(
             <StarshipItem
+                key={ship.id}
                 id={ship.id}
                 logo={ship.logo}
                 title={ship.title}
@@ -19,10 +20,10 @@ export function Starships(){
     return (
         <div className={'container mx-auto'}>
 
-            <div className={'flex flex-col md:flex-row lg:flex-row mt-2'}>
-                <img className={'object-cover w-full md:w-96 md:h-96 lg:w-100 lg:h-100'} src={banner} alt={''}/>
+            <div className={'flex flex-col md:flex-row lg:flex-row mt-10'}>
+                <img className={'object-cover w-full h-[40vh]'} src={banner} alt={''}/>
 
-                <div className={'w-full md:h-96 lg:h-100 m5 bg-[#EA2D1C1A]'}>
+                <div className={'w-full h-[40vh] m5 bg-[#EA2D1C1A]'}>
                     <div className={'flex flex-col'}>
                         <h2 className={'text-4xl px-4 md:pt-5 lg:pt-5 text-[#E0E0E0] font-semibold'}>
                             INTERSTELLAR TRAVEL

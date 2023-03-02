@@ -10,9 +10,7 @@ export function StarshipDetails() {
     return (
         <div className="bg-black w-full min-h-screen mb-0">
 
-            <div className='border-b-2  border-white  m-auto w-11/12 mt-4' />
             <div className='container mx-auto mt-10 text-white flex  flex-col'>
-
                 <div className="md:flex items-start justify-center py-12 2xl:px-20 md:px-6 px-4">
 
                     <div className="xl:w-2/5 lg:w-2/5 md:w1/2 w-80 md:block h-fit">

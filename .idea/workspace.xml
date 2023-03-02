@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a9d2bb7-8d45-4d8a-af1a-ea4141884bc8" name="Changes" comment="Auth: Add login and register with email">
+    <list default="true" id="9a9d2bb7-8d45-4d8a-af1a-ea4141884bc8" name="Changes" comment="StarshipDetail: Fix text padding.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/starships/StarshipDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/starships/StarshipDetails.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/starships/StarshipItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/starships/StarshipItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Starships.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Starships.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,6 +91,7 @@
       <workItem from="1677690405078" duration="4212000" />
       <workItem from="1677741057631" duration="2484000" />
       <workItem from="1677747573547" duration="15881000" />
+      <workItem from="1677776141036" duration="373000" />
     </task>
     <task id="LOCAL-00001" summary="CI: Setup Firebase PR &amp; Deploy">
       <created>1674627291680</created>
@@ -255,7 +254,21 @@
       <option name="project" value="LOCAL" />
       <updated>1677766083732</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="StarshipDetail: Add detail and routing.">
+      <created>1677775457163</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1677775457163</updated>
+    </task>
+    <task id="LOCAL-00025" summary="StarshipDetail: Fix text padding.">
+      <created>1677775933883</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1677775933883</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +294,8 @@
     <MESSAGE value="Home: Reset original ui" />
     <MESSAGE value="Routes: Add Starship to App" />
     <MESSAGE value="CI: Add alt to image" />
-    <option name="LAST_COMMIT_MESSAGE" value="CI: Add alt to image" />
+    <MESSAGE value="StarshipDetail: Add detail and routing." />
+    <MESSAGE value="StarshipDetail: Fix text padding." />
+    <option name="LAST_COMMIT_MESSAGE" value="StarshipDetail: Fix text padding." />
   </component>
 </project>
