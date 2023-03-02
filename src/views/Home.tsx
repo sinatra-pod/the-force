@@ -32,7 +32,6 @@ function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
       <main className="flex-1 text-white mt-4">
         <section className="flex">
           <div className="w-[50%] px-20 py-2 space-y-10">

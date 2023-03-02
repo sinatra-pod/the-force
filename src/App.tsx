@@ -8,7 +8,7 @@ import FilmDetail from "./views/FilmDetail";
 import Planets from "./views/Planets";
 
 import PlanetDetails from "./components/planets/PlanetDetails";
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 import Databank from "./views/Databank";
 import DatabankDetails from "./components/databanks/DatabankDetails";
 
@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <header className="container__header">
-        {pathname !== "/login" && <Header /> && pathname !== "/register" && <Header />}
+        {pathname !== "/login" && <Navbar /> && pathname !== "/register" && <Navbar />}
       </header>
       <div>
         <Routes>
