@@ -94,7 +94,8 @@ export function Starships(){
 
             <div className={'flex flex-col md:flex-row lg:flex-row mt-2'}>
                 <img className={'object-cover w-full md:w-96 md:h-96 lg:w-100 lg:h-100'} src={banner} alt={''}/>
-                <div className={'w-full md:h-96 lg:h-100 md:w-3/5 lg:w-5/7 m5 bg-[#EA2D1C1A]'}>
+
+                <div className={'w-full md:h-96 lg:h-100 m5 bg-[#EA2D1C1A]'}>
                     <div className={'flex flex-col'}>
                         <h2 className={'text-4xl px-4 md:pt-5 lg:pt-5 text-[#E0E0E0] font-extrabold'}>
                             INTERSTELLAR TRAVEL
@@ -116,25 +117,13 @@ export function Starships(){
                         </p>
                     </div>
                 </div>
-
-                <div className={'flex flex-col w-full md:w-2/5 lg:w-2/7 md:ml-4 lg:ml-5'}>
-                    <h3 className={'text-2xl px-1 text-white font-extrabold'}>
-                        More...
-                    </h3>
-                    <button className={'w-max p-3 mt-5 bg-[#828282] text-white font-extrabold rounded-md'}>
-                        SEE ALL STARSHIPS
-                    </button>
-                    <button className={'w-max p-3 mt-5 bg-[#828282] text-white font-extrabold rounded-md'}>
-                        RETIRED SHIPS
-                    </button>
-                </div>
             </div>
 
             <h2 className={'text-4xl px-1 mt-20 mb-2 font-extrabold'}>
                 ALL ABOARD THE STARSHIP
             </h2>
 
-            <div className={'grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-5 mt-4'}>
+            <div className={'grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-4 mt-4'}>
                 { ships }
             </div>
         </div>

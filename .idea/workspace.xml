@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a9d2bb7-8d45-4d8a-af1a-ea4141884bc8" name="Changes" comment="Home: Reset original ui">
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+    <list default="true" id="9a9d2bb7-8d45-4d8a-af1a-ea4141884bc8" name="Changes" comment="CI: Add alt to image">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Starships.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Starships.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +89,7 @@
       <workItem from="1677571545207" duration="15569000" />
       <workItem from="1677690405078" duration="4212000" />
       <workItem from="1677741057631" duration="2484000" />
-      <workItem from="1677747573547" duration="15041000" />
+      <workItem from="1677747573547" duration="15881000" />
     </task>
     <task id="LOCAL-00001" summary="CI: Setup Firebase PR &amp; Deploy">
       <created>1674627291680</created>
@@ -237,7 +238,21 @@
       <option name="project" value="LOCAL" />
       <updated>1677765420770</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Routes: Add Starship to App">
+      <created>1677765857710</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1677765857710</updated>
+    </task>
+    <task id="LOCAL-00023" summary="CI: Add alt to image">
+      <created>1677766083732</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1677766083732</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +276,8 @@
     <MESSAGE value="Starships: tmp CHANGE" />
     <MESSAGE value="Starships: Complete" />
     <MESSAGE value="Home: Reset original ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="Home: Reset original ui" />
+    <MESSAGE value="Routes: Add Starship to App" />
+    <MESSAGE value="CI: Add alt to image" />
+    <option name="LAST_COMMIT_MESSAGE" value="CI: Add alt to image" />
   </component>
 </project>
