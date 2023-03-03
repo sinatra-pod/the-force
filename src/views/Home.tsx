@@ -1,7 +1,7 @@
 import React from "react";
 import { getUser } from "../utils/authData";
 import { useNavigate } from "react-router-dom";
-import FilmsList from "../components/Films/FilmsList";
+// import FilmsList from "../components/Films/FilmsList";
 import { useData } from "../hooks/data/useData";
 import { gql } from "@apollo/client";
 import { AppLoader } from "../components/AppLoader";

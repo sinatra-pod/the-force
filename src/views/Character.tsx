@@ -57,9 +57,9 @@ function Databank() {
     );
   });
 
-  const handleSubmit = (item: any) => {
-    navigate(`/character/${item.id}`);
-  };
+  // const handleSubmit = (item: any) => {
+  //   navigate(`/character/${item.id}`);
+  // };
 
   return (
     <div className="bg-black container mx-auto w-full min-h-screen mb-0">
