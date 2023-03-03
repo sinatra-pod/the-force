@@ -1,75 +1,34 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { gql } from '@apollo/client';
+import { useData } from "../../hooks/data/useData";
+import { planetInfo } from "../../utils/starwarimages";
 
 function Planet() {
-  // const [openTab, setOpenTab] = React.useState(1);
-  const navigate = useNavigate();
   const banner =
     "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHN0YXIlMjB3YXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60";
 
-  const planets = [
-    {
-      id: 1,
-      title: "The Phantom Menace",
-      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-      description:
-        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-    },
-    {
-      id: 2,
-      title: "The Phantom Menace",
-      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-      description:
-        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-    },
-    {
-      id: 3,
-      title: "The Phantom Menace",
-      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-      description:
-        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-    },
-    {
-      id: 4,
-      title: "The Phantom Menace",
-      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-      description:
-        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-    },
-    {
-      id: 5,
-      title: "The Phantom Menace",
-      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-      description:
-        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-    },
-    {
-      id: 6,
-      title: "The Phantom Menace",
-      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-      description:
-        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-    },
-    {
-      id: 7,
-      title: "The Phantom Menace",
-      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-      description:
-        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-    },
-    {
-      id: 8,
-      title: "The Phantom Menace",
-      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-      description:
-        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-    },
-  ];
 
-  const handleSubmit = (item: any) => {
-    navigate(`/character/${item.id}`);
-  };
+  const { loading, error, data } = useData(gql` query GetPlanets {
+    allPlanets {
+      planets {
+        id
+        name
+        population
+        orbitalPeriod
+      }
+    }
+  }`, {})
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error : {error.message}</p>;
+
+  const planets = data.allPlanets.planets
+
+  // console.log("=====================--==",);
+  // const handleSubmit = (item: any) => {
+  //   navigate(`/character/${item.id}`);
+  // };
+  const formatDesc = (input): string => `${input.slice(0, 150)} ...`
 
   return (
     <>
@@ -112,27 +71,29 @@ function Planet() {
             All Characters
           </h2>
           <div className="flex h-auto py-8 items-center justify-center w-full">
-            <div className="w-full gap-8 flex-wrap flex justify-start items-center">
-              {planets.map((character) => (
-                <div className={"flex flex-col"}>
-                  <img
-                    className={"object-cover h-96 rounded-t-lg"}
-                    src={character.image}
-                    alt={""}
-                  />
-                  <h1 className={"text-lg text-white my-4"}>
-                    {character.title}
-                  </h1>
-                  <button
-                    onClick={() => handleSubmit(character)}
-                    className="relative text-white w-[60%] inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-red-900 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200"
-                  >
-                    <span className="relative text-white w-[100%] px-5 py-4 transition-all ease-in duration-75 bg-black rounded-md group-hover:bg-opacity-0">
-                      Planet Details
-                    </span>
-                  </button>
-                </div>
-              ))}
+            <div className={'grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-4 mt-4 mb-5'}>
+              {planets.map((character) => {
+                const planetData = planetInfo()
+                return (
+
+                  <div className={'flex flex-col min-h-[100px]'} key={character.id}>
+                    <img className={'object-cover h-96 rounded-t-lg'} src={planetData.planetLogo} alt={''} />
+                    <div className={'flex flex-col h-64 items-start justify-between'}>
+                      <h1 className={'text-2xl px-1 text-white font-semibold'}>
+                        {character.name}
+                      </h1>
+                      <p className={'px-1 mt-2 text-white font-extralight text-lg'}>
+                        {formatDesc(planetData.planetDesc)}
+                      </p>
+                      <Link
+                        to={`/planet/${character.id}`}
+                        className={'border border-2 rounded-md mt-4 border-[#E02312] text-white p-2 hover:bg-[#E02312] w-max'}>
+                        PLANET DETAILS
+                      </Link>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>
