@@ -4,7 +4,6 @@ import "./App.css";
 import Home from "./views/Home";
 import Register from "./views/Register";
 import Login from "./views/Login";
-import FilmDetail from "./views/FilmDetail";
 import Planets from "./views/Planets";
 import {Starships} from "./views/Starships";
 import PlanetDetails from "./components/planets/PlanetDetails";
@@ -13,6 +12,7 @@ import Footer from "./components/Footer";
 import Character from "./views/Character";
 import CharacterDetails from "./components/characters/CharacterDetails";
 import {StarshipDetails} from "./components/starships/StarshipDetails";
+import FilmDetail from "./components/Films/FilmDetail";
 
 function App() {
   const { pathname } = useLocation();
@@ -27,7 +27,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/filmdetail" element={<FilmDetail />} />
+          <Route path="/film/:id" element={<FilmDetail />} />
           <Route path="/planets" element={<Planets />} />
           <Route path="/planet/:id" element={<PlanetDetails />} />
           <Route path="/character" element={<Character />} />

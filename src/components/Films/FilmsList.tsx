@@ -1,11 +1,13 @@
 import React from "react";
 import FilmDetail from "./FilmDetail";
 
-const FilmsList = ({films}: any) => {
+const FilmsList = () => {
+
+  let films = []
   return (
     <div className="flex justify-start gap-8 flex-wrap">
       {films ? (
-        films.map((film: any, index: number) => <FilmDetail key={index} film={film} />)
+        films.map((film: any, index: number) => <FilmDetail key={index} />)
       ) : (
         <>No films to load</>
       )}
