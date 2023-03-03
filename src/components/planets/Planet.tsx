@@ -6,7 +6,7 @@ import { planetInfo } from "../../utils/starwarimages";
 
 function Planet() {
   const banner =
-    "https://lumiere-a.akamaihd.net/v1/images/aa-9-coruscant-freighter_a856053d.jpeg?region=92%2C0%2C1181%2C665";
+    "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHN0YXIlMjB3YXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60";
 
 
   const { loading, error, data } = useData(gql` query GetPlanets {
@@ -33,8 +33,8 @@ function Planet() {
   return (
     <>
       <div className="bg-black container mx-auto w-full min-h-screen mb-0">
-        <section className="flex py-20">
-          <div className="">
+        <section className="flex mt-4">
+          <div className="w-[40%]">
             <img
               className={"object-cover w-full h-[40vh]"}
               src={banner}
@@ -42,17 +42,19 @@ function Planet() {
             />
           </div>
           <div className="w-[60%] text-white bg-[#EA2D1C1A] px-4">
-            <h2 className="text-3xl font-semibold uppercase my-4">Star Wars</h2>
+            <h2 className="text-3xl font-semibold uppercase my-4">Force Planet</h2>
 
             <div className="space-y-8">
               <p className="font-extralight text-lg">
-                "Star Wars" is a space opera franchise created by George Lucas
-                that revolves around a group of rebels fighting against an evil
-                empire. The franchise includes multiple films, books, comics,
-                and other media. The original "Star Wars" trilogy, released in
-                the late 1970s and early 1980s, tells the story of Luke
-                Skywalker and his journey to become a Jedi and defeat the
-                Empire.
+                Force Planet Not marked on any star map and not recognized with
+                any specific name, the Force planet is a mystical world and the
+                foundation of life itself. It is the birthplace of the
+                midi-chlorians, microscopic organisms that connect the living
+                Force to the cosmic Force. Surrounded by a bright nebula, the
+                Force planet is a barren place, featuring only luminescent
+                geysers that shoot energy from deep within the world. Several
+                islands hover above the surface, each teeming with plant life
+                and strong with the Force
               </p>
               <p className="font-extralight text-lg">
                 In the prequel trilogy, the backstory of Darth Vader is

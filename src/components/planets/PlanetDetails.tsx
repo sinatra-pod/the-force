@@ -38,7 +38,6 @@ function PlanetDetails() {
 
       <div className="bg-black w-full min-h-screen mb-0">
         <div className='container mx-auto md:container md:mx-auto mt-10 text-white flex  '>
-
           {error ? <AppError message={error.message} /> : <></>}
           {data ? <>
             <div className="md:flex items-start justify-center py-12 2xl:px-20 md:px-6 px-4">
