@@ -2,50 +2,60 @@ import React from "react";
 // import SearchForm from "../components/form/SearchForm";
 // import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useData } from "../hooks/data/useData";
+import { gql } from "@apollo/client";
+import { shipDescriptions, images } from "../utils/starwarimages";
+import CharacterItem from "../components/characters/CharacterItem";
+import { AppError } from "../components/AppError";
+import { AppLoader } from "../components/AppLoader";
 
 function Databank() {
   const navigate = useNavigate();
 
   const banner =
-  "https://images.unsplash.com/photo-1601814933824-fd0b574dd592?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c3RhciUyMHdhcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60";
+    "https://images.unsplash.com/photo-1601814933824-fd0b574dd592?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c3RhciUyMHdhcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60";
 
-  const characters = [
-    {
-      id: 1,
-      title: "The Phantom Menace",
-      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-      description:
-        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-    },
-    {
-      id: 2,
-      title: "The Phantom Menace",
-      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-      description:
-        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-    },
-    {
-      id: 3,
-      title: "The Phantom Menace",
-      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-      description:
-        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-    },
-    {
-      id: 4,
-      title: "The Phantom Menace",
-      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-      description:
-        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-    },
-    {
-      id: 5,
-      title: "The Phantom Menace",
-      image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-      description:
-        "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-    },
-  ];
+  const { loading, error, data } = useData(
+    gql`
+      query ExampleQuery {
+        allPeople {
+          people {
+            id
+            height
+            hairColor
+            gender
+            eyeColor
+            skinColor
+            name
+            mass
+          }
+        }
+      }
+    `
+  );
+
+  const formatDesc = (input): string => `${input.slice(0, 150)} ...`;
+
+  let characterData = [];
+
+  if (data) {
+    characterData = data.allPeople.people;
+  }
+
+  const characters = characterData.map((character) => {
+    const characterLogo = images[Math.floor(Math.random() * 10)];
+    const characterDesc = shipDescriptions[Math.floor(Math.random() * 4)];
+
+    return (
+      <CharacterItem
+        key={character["id"]}
+        id={character["id"]}
+        logo={characterLogo}
+        title={character["name"]}
+        description={formatDesc(characterDesc)}
+      />
+    );
+  });
 
   const handleSubmit = (item: any) => {
     navigate(`/character/${item.id}`);
@@ -81,30 +91,19 @@ function Databank() {
         <h2 className="text-red-900 font-semibold text-xl my-2 uppercase">
           All Characters
         </h2>
-        <div className="flex h-auto py-8 items-center justify-center w-full">
-          <div className="w-full gap-8 flex-wrap flex justify-start items-center">
-            {characters.map((character) => (
-              <div className={"flex flex-col"}>
-                <img
-                  className={"object-cover h-96 rounded-t-lg"}
-                  src={character.image}
-                  alt={""}
-                />
-                <h1 className={"text-lg text-white my-4"}>{character.title}</h1>
-                <button
-                  onClick={() => handleSubmit(character)}
-                  className="relative text-white w-[80%] inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-red-900 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200"
-                >
-                  <span className="relative text-white w-[100%] px-5 py-4 transition-all ease-in duration-75 bg-black rounded-md group-hover:bg-opacity-0">
-                    Character Details
-                  </span>
-                </button>
-              </div>
-            ))}
-          </div>
+
+        {loading ? <AppLoader /> : <></>}
+          {data ? (
+            <div className={'grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-4 mt-4 mb-5'}>
+              {characters}
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
+
+        {error ? <AppError message={error.message} /> : <></>}
       </div>
-    </div>
   );
 }
 

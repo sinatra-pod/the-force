@@ -58,7 +58,6 @@ export function Starships(){
         <div className={'container mx-auto'}>
 
             <div className={'flex flex-col md:flex-row lg:flex-row mt-10'}>
-                <img className={'object-cover w-full md:w-[40vh] lg:w-[40vh] h-[40vh]'} src={banner} alt={''}/>
 
                 <div className={'w-full h-[40vh] m5 bg-[#EA2D1C1A]'}>
                     <div className={'flex flex-col'}>
@@ -82,6 +81,8 @@ export function Starships(){
                         </p>
                     </div>
                 </div>
+
+                <img className={'object-cover w-full md:w-[40vh] lg:w-[40vh] h-[40vh]'} src={banner} alt={''}/>
             </div>
 
             <h2 className={'text-4xl px-1 mt-20 mb-2 font-semibold text-[#E02312]'}>

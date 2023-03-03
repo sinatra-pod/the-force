@@ -2,46 +2,57 @@ import React from "react";
 import { getUser } from "../utils/authData";
 import { useNavigate } from "react-router-dom";
 import FilmsList from "../components/Films/FilmsList";
-
-const films = [
-  {
-    id: 1,
-    title: "Starwars welcome to galaxy",
-    description:
-      "'Star Wars' is a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics,",
-  },
-  {
-    id: 2,
-    title: "Starwars welcome to galaxy",
-    description:
-      "'Star Wars' is a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics,",
-  },
-  {
-    id: 3,
-    title: "Starwars welcome to galaxy",
-    description:
-      "'Star Wars' is a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics,",
-  },
-  {
-    id: 4,
-    title: "Starwars welcome to galaxy",
-    description:
-      "'Star Wars' is a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics,",
-  },
-  {
-    id: 5,
-    title: "Starwars welcome to galaxy",
-    description:
-      "'Star Wars' is a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics,",
-  },
-];
+import { useData } from "../hooks/data/useData";
+import { gql } from "@apollo/client";
+import { AppLoader } from "../components/AppLoader";
+import { AppError } from "../components/AppError";
+import { shipDescriptions, shipsImages } from "../utils/starwarimages";
+import FilmItem from "../components/Films/FilmItem";
 
 function Home() {
   const navigate = useNavigate();
   if (!getUser()) navigate("/login");
 
-    const banner =
+  const banner =
     "https://images.unsplash.com/flagged/photo-1589829482673-03413c918c48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c3RhciUyMHdhcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60";
+
+  const { loading, error, data } = useData(
+    gql`
+      query ExampleQuery {
+        allFilms {
+          films {
+            id
+            director
+            title
+            releaseDate
+          }
+        }
+      }
+    `
+  );
+
+  const formatDesc = (input): string => `${input.slice(0, 150)} ...`;
+
+  let films = [];
+
+  if (data) {
+    films = data.allFilms.films;
+  }
+
+  const filmData = films.map((film) => {
+    const filmLogo = shipsImages[Math.floor(Math.random() * 7)];
+    const fimlDesc = shipDescriptions[Math.floor(Math.random() * 4)];
+
+    return (
+      <FilmItem
+        key={film["id"]}
+        id={film["id"]}
+        logo={filmLogo}
+        title={film["title"]}
+        description={formatDesc(fimlDesc)}
+      />
+    );
+  });
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -78,7 +89,23 @@ function Home() {
           <h4 className="uppercase font-extralight">
             <span className="font-semibold">Latest</span> Seasons
           </h4>
-          <FilmsList films={films} />
+
+          {loading ? <AppLoader /> : <></>}
+
+          {data ? (
+            <div
+              className={
+                "grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-4 mt-4 mb-5"
+              }
+            >
+              {filmData}
+            </div>
+          ) : (
+            <></>
+          )}
+
+          {error ? <AppError message={error.message} /> : <></>}
+          {/* <FilmsList films={films} /> */}
         </section>
       </main>
     </div>
