@@ -1,6 +1,4 @@
 import React from "react";
-import { getUser } from "../utils/authData";
-import { useNavigate } from "react-router-dom";
 import FilmsList from "../components/Films/FilmsList";
 
 const films = [
@@ -37,9 +35,6 @@ const films = [
 ];
 
 function Home() {
-  // const navigate = useNavigate();
-  // if (!getUser()) navigate("/login");
-
   const banner = 'https://lumiere-a.akamaihd.net/v1/images/aa-9-coruscant-freighter_a856053d.jpeg?region=92%2C0%2C1181%2C665'
 
 

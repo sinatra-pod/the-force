@@ -1,75 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
 import { gql } from '@apollo/client';
 import { useData } from "../../hooks/data/useData";
-// import logo from "../../images/starwarslogo.png"
 import { planetInfo } from "../../utils/starwarimages";
-// import { AppLoader } from "../AppLoader";
-// import { AppError } from "../AppError";
-// import { useData } from "../hooks/data/useData";
-// const planets = [
-//   {
-//     id: 1,
-//     title: "The Phantom Menace",
-//     image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-//     description:
-//       "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-//   },
-//   {
-//     id: 2,
-//     title: "The Phantom Menace",
-//     image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-//     description:
-//       "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-//   },
-//   {
-//     id: 3,
-//     title: "The Phantom Menace",
-//     image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-//     description:
-//       "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-//   },
-//   {
-//     id: 4,
-//     title: "The Phantom Menace",
-//     image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-//     description:
-//       "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-//   },
-//   {
-//     id: 5,
-//     title: "The Phantom Menace",
-//     image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-//     description:
-//       "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-//   },
-//   {
-//     id: 6,
-//     title: "The Phantom Menace",
-//     image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-//     description:
-//       "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-//   },
-//   {
-//     id: 7,
-//     title: "The Phantom Menace",
-//     image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-//     description:
-//       "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-//   },
-//   {
-//     id: 8,
-//     title: "The Phantom Menace",
-//     image: "https://i.postimg.cc/0ybdytWT/download.jpg",
-//     description:
-//       "Star Warsis a space opera fran chise created by George Lucas that revolves around a group of rebels fighting against an evil empire. The franchise includes multiple films, books, comics",
-//   },
-// ];
 
 function Planet() {
-  // const [openTab, setOpenTab] = React.useState(1);
-  // const navigate = useNavigate();
   const banner =
     "https://lumiere-a.akamaihd.net/v1/images/aa-9-coruscant-freighter_a856053d.jpeg?region=92%2C0%2C1181%2C665";
 
@@ -139,7 +74,7 @@ function Planet() {
                 const planetData = planetInfo()
                 return (
 
-                  <div className={'flex flex-col min-h-[100px]'}>
+                  <div className={'flex flex-col min-h-[100px]'} key={character.id}>
                     <img className={'object-cover h-96 rounded-t-lg'} src={planetData.planetLogo} alt={''} />
                     <div className={'flex flex-col h-64 items-start justify-between'}>
                       <h1 className={'text-2xl px-1 text-white font-semibold'}>
