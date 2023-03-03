@@ -38,3 +38,13 @@ export const starShipInfo = () => {
         shipLogo, shipDesc
     }
 }
+
+export const planetInfo = () => {
+
+    const planetLogo = images[Math.floor(Math.random() * 7)]
+    const planetDesc = shipDescriptions[Math.floor(Math.random() * 4)]
+
+    return {
+        planetLogo, planetDesc
+    }
+}

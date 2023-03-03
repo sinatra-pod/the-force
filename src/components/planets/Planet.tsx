@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { gql } from '@apollo/client';
 import { useData } from "../../hooks/data/useData";
 import logo from "../../images/starwarslogo.png"
+import { planetInfo } from "../../utils/starwarimages";
+import { AppLoader } from "../AppLoader";
+import { AppError } from "../AppError";
 // import { useData } from "../hooks/data/useData";
 // const planets = [
 //   {
@@ -90,6 +93,7 @@ function Planet() {
   const handleSubmit = (item: any) => {
     navigate(`/character/${item.id}`);
   };
+  const formatDesc = (input): string => `${input.slice(0, 150)} ...`
 
   return (
     <>
@@ -131,24 +135,28 @@ function Planet() {
           </h2>
           <div className="flex h-auto py-8 items-center justify-center w-full">
             <div className={'grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-4 mt-4 mb-5'}>
-              {planets.map((character) => (
-                <div className={'flex flex-col min-h-[100px]'}>
-                  <img className={'object-cover h-96 rounded-t-lg'} src={logo} alt={''} />
-                  <div className={'flex flex-col h-64 items-start justify-between'}>
-                    <h1 className={'text-2xl px-1 text-white font-semibold'}>
-                      {character.name}
-                    </h1>
-                    <p className={'px-1 mt-2 text-white font-extralight text-lg'}>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae architecto est deserunt minus necessitatibus animi deleniti veritatis earum expedita doloremque iusto vitae exercitationem saepe nobis temporibus modi, nostrum veniam fuga.
-                    </p>
-                    <Link
-                      to={`/starship/${character.id}`}
-                      className={'border border-2 rounded-md mt-4 border-[#E02312] text-white p-2 hover:bg-[#E02312] w-max'}>
-                      SHIP DETAILS
-                    </Link>
+              {planets.map((character) => {
+                const planetData = planetInfo()
+                return (
+
+                  <div className={'flex flex-col min-h-[100px]'}>
+                    <img className={'object-cover h-96 rounded-t-lg'} src={planetData.planetLogo} alt={''} />
+                    <div className={'flex flex-col h-64 items-start justify-between'}>
+                      <h1 className={'text-2xl px-1 text-white font-semibold'}>
+                        {character.name}
+                      </h1>
+                      <p className={'px-1 mt-2 text-white font-extralight text-lg'}>
+                        {formatDesc(planetData.planetDesc)}
+                      </p>
+                      <Link
+                        to={`/planet/${character.id}`}
+                        className={'border border-2 rounded-md mt-4 border-[#E02312] text-white p-2 hover:bg-[#E02312] w-max'}>
+                        PLANET DETAILS
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </div>
         </div>
