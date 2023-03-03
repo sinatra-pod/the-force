@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { gql } from '@apollo/client';
 import { useData } from "../../hooks/data/useData";
-import logo from "../../images/starwarslogo.png"
+// import logo from "../../images/starwarslogo.png"
 import { planetInfo } from "../../utils/starwarimages";
-import { AppLoader } from "../AppLoader";
-import { AppError } from "../AppError";
+// import { AppLoader } from "../AppLoader";
+// import { AppError } from "../AppError";
 // import { useData } from "../hooks/data/useData";
 // const planets = [
 //   {
@@ -69,7 +69,7 @@ import { AppError } from "../AppError";
 
 function Planet() {
   // const [openTab, setOpenTab] = React.useState(1);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const banner =
     "https://lumiere-a.akamaihd.net/v1/images/aa-9-coruscant-freighter_a856053d.jpeg?region=92%2C0%2C1181%2C665";
 
@@ -90,9 +90,9 @@ function Planet() {
   const planets = data.allPlanets.planets
 
   // console.log("=====================--==",);
-  const handleSubmit = (item: any) => {
-    navigate(`/character/${item.id}`);
-  };
+  // const handleSubmit = (item: any) => {
+  //   navigate(`/character/${item.id}`);
+  // };
   const formatDesc = (input): string => `${input.slice(0, 150)} ...`
 
   return (
