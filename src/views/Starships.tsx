@@ -1,19 +1,56 @@
 import React from "react";
+import {gql} from "@apollo/client";
 import {StarshipItem} from "../components/starships/StarshipItem";
+import {useData} from "../hooks/data/useData";
+import {AppLoader} from "../components/AppLoader";
+import {AppError} from "../components/AppError";
+import {shipDescriptions, shipsImages} from "../utils/starwarimages";
 export function Starships(){
+
+    const { loading, error, data } = useData(
+        gql `query ExampleQuery {
+              allStarships {
+                starships {
+                  cargoCapacity
+                  consumables
+                  id
+                  crew
+                  created
+                  costInCredits
+                  length
+                  maxAtmospheringSpeed
+                  name
+                  passengers
+                  starshipClass
+                  edited
+                  hyperdriveRating
+                  manufacturers
+                }
+              }
+        }`)
 
     const banner = 'https://lumiere-a.akamaihd.net/v1/images/aa-9-coruscant-freighter_a856053d.jpeg?region=92%2C0%2C1181%2C665'
 
     const formatDesc = (input): string => `${input.slice(0, 150)} ...`
 
+    let starShips = []
+
+    if(data){
+        starShips = data.allStarships.starships
+    }
+
     const ships = starShips.map((ship) => {
+
+        const shipLogo = shipsImages[Math.floor(Math.random() * 7)]
+        const shipDesc = shipDescriptions[Math.floor(Math.random() * 4)]
+
         return(
             <StarshipItem
-                key={ship.id}
-                id={ship.id}
-                logo={ship.logo}
-                title={ship.title}
-                description={formatDesc(ship.description)} />
+                key={ship["id"]}
+                id={ship["id"]}
+                logo={shipLogo}
+                title={ship["name"]}
+                description={formatDesc(shipDesc)} />
         )
     })
 
@@ -51,66 +88,16 @@ export function Starships(){
                 ALL ABOARD THE STARSHIP
             </h2>
 
-            <div className={'grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-4 mt-4 mb-5'}>
-                { ships }
-            </div>
+            { loading ? <AppLoader/> : <></> }
+
+            { data ?
+                <div className={'grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-4 mt-4 mb-5'}>
+                    { ships }
+                </div> : <></> }
+
+            { error ? <AppError message={error.message}/> : <></> }
+
+
         </div>
     )
 }
-
-export const starShips = [
-    {
-        id:'c3RhcnNoaXBzOjI',
-        title: 'Naboo Royal Starship',
-        description: 'The Naboo Royal Starship boasts a strikingly beautiful design that embodies the craftsmanship that prevailed in the peaceful years of the Republic. The polished, streamlined J-type 327 Nubian vessel lacks any offensive weaponry, but does feature strong shields and a competent hyperdrive. During the Trade Federation invasion of Naboo, Queen Amidala and her retinue escaped aboard the Royal Starship. Piloted by Ric Olie, the vessel narrowly avoided the Trade Federation blockade, though its hyperdrive was damaged. The ship limped to Tatooine, where a replacement T-14 hyperdrive generator was procured.',
-        logo: 'https://lumiere-a.akamaihd.net/v1/images/databank_nabooroyalstarship_01_169_e61f677e.jpeg?region=0%2C0%2C1560%2C878',
-        speed: '950 km/h',
-        passengers: '600',
-        manufacturers:'Corellian Engineering Corporation',
-        starshipClass: 'corvette',
-        rating: '2'
-
-    },
-    {
-        id:'c3RhcnNoaXBzOjIx5',
-        title: '\n' +
-            'Gobi Glie\'s Starship',
-        description: 'Gobi Glie\'s starship may not look like much from the outside, but it holds untold riches for a young Hera Syndulla. At the controls of the craft, Gobi teaches the young girl how to fly on instinct, entrusting her with his ship with the exception of take-off and landing. The craft is also an essential part of the freedom fighter\'s work to shore up armaments for Ryloth after the Imperial occupation begins in the time of the Empire. On one occasion, Gobi and Hera met Clone Force 99 on Ryloth\'s moon to secure weapons for the coming civil war, smuggling the elicit cargo inside the ship\'s ample hold.',
-        logo: 'https://lumiere-a.akamaihd.net/v1/images/gobi-gile-s-starship-main_51805deb.jpeg?region=158%2C0%2C964%2C542',
-        speed: '950 km/h',
-        passengers: '700',
-        manufacturers:'Corellian Engineering Corporation',
-        starshipClass: 'corvette',
-        rating: '5'
-
-    },
-    {
-        id:'-Xc3RhcnNoaXBzOjI',
-        title: 'ARC-170 Starfighter',
-        description: 'Protecting the skies over Republic worlds were specialized clone fighter forces flying the latest in starfighter technology. The ARC-170 fighter was a bulky, aggressive ship covered with weapons. Three clone trooper pilots operated this advanced combat craft, with a pilot handling the flight maneuvers, a copilot operating the laser cannons mounted on the ship\'s wide wings, and a tailgunner operating the dorsal rear-facing cannon. The fighter also carried an astromech droid for onboard repairs.',
-        logo: 'https://lumiere-a.akamaihd.net/v1/images/databank_arc170starfighter_01_169_f932abcb.jpeg?region=0%2C0%2C1560%2C878',
-        speed: '1950 km/h',
-        passengers: '890',
-        manufacturers:'Corellian Corporation',
-        starshipClass: 'Fighter',
-        rating: '4'
-
-    },
-    {
-        id:'c3RhcnNoasdadsaXBzOjI',
-        title: 'A-wing trainer (RZ-1T)',
-        description: 'The RZ-1T, an A-wing trainer, featured room for two passengers, allowing for novice pilots to have an instructor on board. It was developed in the early days of the rebellion against the Empire, and used by Kanan and Ezra of the Ghost team.',
-        logo: 'https://lumiere-a.akamaihd.net/v1/images/databank_nabooroyalstarship_01_169_e61f677e.jpeg?region=0%2C0%2C1560%2C878',
-        speed: '760 km/h',
-        passengers: '160',
-        manufacturers:'Engineering Corporation',
-        starshipClass: 'corvette',
-        rating: '2'
-
-    }
-]
-
-
-
-
-

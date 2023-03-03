@@ -2,8 +2,12 @@ import React from "react";
 import { FaUserCircle } from "react-icons/fa";
 import Logo from "../images/starwarslogo.png";
 import { Link } from 'react-router-dom';
+import {getUser} from "../utils/authData";
 
 const Navbar = () => {
+
+  const loggedInUser = getUser()
+
   return (
     <div className="w-full">
       <div className="text-white flex justify-between items-center container mx-auto">
@@ -16,9 +20,16 @@ const Navbar = () => {
           <div><Link to="/planets">Planets</Link></div>
           <div><Link to="/starships">Starships</Link></div>
         </div>
-        <div className="">
-          <FaUserCircle className="text-4xl" />
-        </div>
+
+        {
+          loggedInUser ? <h2 className={'text-l text-white'}>{loggedInUser}</h2> :
+          <div>
+            <Link to={'/login'} >
+              <FaUserCircle className="text-4xl" />
+            </Link>
+          </div>
+        }
+
       </div>
     </div>
   );
