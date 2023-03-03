@@ -7,7 +7,7 @@ function Databank() {
   const navigate = useNavigate();
 
   const banner =
-    "https://lumiere-a.akamaihd.net/v1/images/aa-9-coruscant-freighter_a856053d.jpeg?region=92%2C0%2C1181%2C665";
+  "https://images.unsplash.com/photo-1601814933824-fd0b574dd592?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c3RhciUyMHdhcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60";
 
   const characters = [
     {
@@ -53,34 +53,28 @@ function Databank() {
 
   return (
     <div className="bg-black container mx-auto w-full min-h-screen mb-0">
-      <section className="flex py-20">
+      <section className="flex mt-4">
+        <div className="w-[60%] text-white bg-[#EA2D1C1A] px-4">
+          <h2 className="text-3xl font-semibold uppercase my-4">Grogu</h2>
+
+          <div className="space-y-8">
+            <p className="font-extralight text-lg">
+              A mysterious child pursued by bounty hunters on behalf of Imperial
+              interests, the foundling Grogu found protection with the
+              Mandalorian Din Djarin. Through their adventures and journeys
+              through the galaxy, young Grogu is honing remarkable abilities.
+              Although he previously trained as a Jedi, Grogu has chosen to
+              return to Din's side and continues to share his adventures as they
+              take a stand against the Imperial remnant.
+            </p>
+          </div>
+        </div>
         <div className="w-[40%]">
           <img
             className={"object-cover w-full h-[40vh]"}
             src={banner}
             alt={""}
           />
-        </div>
-        <div className="w-[60%] text-white bg-[#EA2D1C1A] px-4">
-          <h2 className="text-3xl font-semibold uppercase my-4">Star Wars</h2>
-
-          <div className="space-y-8">
-            <p className="font-extralight text-lg">
-              "Star Wars" is a space opera franchise created by George Lucas
-              that revolves around a group of rebels fighting against an evil
-              empire. The franchise includes multiple films, books, comics, and
-              other media. The original "Star Wars" trilogy, released in the
-              late 1970s and early 1980s, tells the story of Luke Skywalker and
-              his journey to become a Jedi and defeat the Empire.
-            </p>
-            <p className="font-extralight text-lg">
-              In the prequel trilogy, the backstory of Darth Vader is explored.
-              The prequels follow Jedi Knight Qui-Gon Jinn and his apprentice
-              Obi-Wan Kenobi as they encounter a young Anakin Skywalker, who
-              eventually becomes Darth Vader. The prequels show the Republic's
-              downfall and the rise of the Empire.
-            </p>
-          </div>
         </div>
       </section>
       <div className="mt-10 w-full">
@@ -97,7 +91,10 @@ function Databank() {
                   alt={""}
                 />
                 <h1 className={"text-lg text-white my-4"}>{character.title}</h1>
-                <button onClick={() => handleSubmit(character)} className="relative text-white w-[80%] inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-red-900 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200">
+                <button
+                  onClick={() => handleSubmit(character)}
+                  className="relative text-white w-[80%] inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-red-900 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200"
+                >
                   <span className="relative text-white w-[100%] px-5 py-4 transition-all ease-in duration-75 bg-black rounded-md group-hover:bg-opacity-0">
                     Character Details
                   </span>

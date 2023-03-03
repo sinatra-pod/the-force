@@ -7,7 +7,7 @@ function Planets() {
     return (
 
         <div className="bg-black w-full min-h-screen mb-0">
-            <div className='mt-10 flex'>
+            <div className='flex'>
                 <Planet />
             </div>
         </div>
