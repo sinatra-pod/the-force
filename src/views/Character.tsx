@@ -1,7 +1,7 @@
 import React from "react";
 // import SearchForm from "../components/form/SearchForm";
 // import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { useData } from "../hooks/data/useData";
 import { gql } from "@apollo/client";
 import { shipDescriptions, images } from "../utils/starwarimages";
@@ -10,7 +10,7 @@ import { AppError } from "../components/AppError";
 import { AppLoader } from "../components/AppLoader";
 
 function Databank() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const banner =
     "https://images.unsplash.com/photo-1601814933824-fd0b574dd592?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c3RhciUyMHdhcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60";
