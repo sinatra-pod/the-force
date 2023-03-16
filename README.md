@@ -57,6 +57,7 @@ Meta
 Authors:
    * **Joseph Wambua** - *Initial work* - [mutuajoseph](https://github.com/mutuajoseph)
    * **Ian Okumu** - *Environment Setup* - [otsembo](https://github.com/otsembo)
+   * **Rose Oketcn** - *Team Lead* - [Roseoketch](https://github.com/Roseoketch)
    * [please add you author creds here]
 
 **Status**: `maintained, and is currently in development`
